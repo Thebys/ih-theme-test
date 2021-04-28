@@ -9,7 +9,7 @@
 
     <div class="container">
         <div class="col-xs-12" id="footer-logo">
-            <img data-src="/wp-content/themes/impacthub/assets/img/impact-hub-logo-v2.png">
+            <img data-src="/wp-content/themes/impacthub/assets/img/impact-hub-innovation-logo-white.png">
         </div>
         <div class="flex-boxes" id="footer-top">
             <div class="col-xs-12 col-sm-3" id="footer-left">

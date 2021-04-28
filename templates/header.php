@@ -29,7 +29,7 @@
         <div class="container">
             <div class="brand">
                 <a class="brand-home" href="<?php echo home_url(); ?>">
-                    <img src="/wp-content/themes/impacthub/assets/img/impact-hub-logo-v2.png" alt="Impact Hub Logo" id="mainMenuLogo" />
+                    <img src="/wp-content/themes/impacthub/assets/img/impact-hub-innovation-logo-red.png" alt="Impact Hub Logo" id="mainMenuLogo" />
                 </a>
             </div>
             <div class="navigation" id="mainNav">
