@@ -5,6 +5,9 @@
  * This file is included from functions.php
  */
 
+// Shortcode for banner
+require_once locate_template('/shortcodes/banner.php');
+
 // Shortcode for events calendar
 require_once locate_template('/shortcodes/custom-calendar.php');
 

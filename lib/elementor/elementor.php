@@ -63,6 +63,7 @@ final class IH_Elementor_Extension {
 		require_once locate_template('/lib/elementor/IH_Widget_PricingTable.php');
 		require_once locate_template('/lib/elementor/IH_Widget_ListItem.php');
 		require_once locate_template('/lib/elementor/IH_Widget_Logos.php');
+		require_once locate_template('/lib/elementor/IH_Widget_Banner.php');
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \IH_Widget_Loop() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \IH_Widget_SectionHeadline() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \IH_Widget_PageButton() );
@@ -73,6 +74,7 @@ final class IH_Elementor_Extension {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \IH_Widget_PricingTable() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \IH_Widget_ListItem() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \IH_Widget_Logos() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \IH_Widget_Banner() );
 	}
 
 	// Remove fonts loaded through by elementor
