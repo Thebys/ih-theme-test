@@ -1,0 +1,21 @@
+/*
+  Modal window that works as confirmation after form submission.
+  TODO: Czech language used, refactor.
+ */
+
+.modal-ikonka {
+  position: relative;
+  left: -10px;
+}
+
+.modal-ikonka-tel {
+  position: relative;
+  left: -8px;
+}
+
+.kalendar-modal {
+  padding: 8px !important;
+  display: block !important;
+  width: 40%;
+  margin: 0 auto;
+}

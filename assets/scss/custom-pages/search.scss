@@ -1,0 +1,80 @@
+// Search functionality is no longer used on our websites because no one really used it.
+// It can still be accessed via /?s=query so styles should stay just in case.
+
+.search-page.container {
+  margin-top: 15px;
+}
+
+.search-results {
+  padding-bottom: 30px;
+}
+
+.search-result .media-object {
+  margin-bottom: 0;
+}
+
+.search-result .media-object a {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+.search-result .content-type {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.search-result .result-content {
+  align-items: flex-start;
+  padding: 0 20px;
+  background: transparent;
+}
+
+.search-results .type-space .result-content {
+  font-size: 1em;
+}
+
+/** SEARCH FORM */
+.search-page.container .search-form {
+  position: relative;
+  margin-top: 30px;
+}
+
+.search-page.container .search-form .search-field {
+  width: 100%;
+}
+
+.search-page.container .search-form .search-close {
+  display: none;
+}
+
+.search-page.container .search-form button,
+.search-page.container .search-form button:active,
+.search-page.container .search-form button:focus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 12px 8px 12px;
+  color: #fff;
+  border-radius: 0;
+  background: $primary_color;
+  border-color: $primary_color;
+  -o-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.search-page.container .search-form button:hover {
+  background: transparent;
+  border-color: transparent;
+  color: $primary_color;
+}

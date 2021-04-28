@@ -1,0 +1,68 @@
+/*
+  3 columns layout to present 3 steps process.
+ */
+
+.member-process h2 {
+  margin: 1em 0 1.3em;
+  @include page-headline;
+}
+
+.member-process {
+  text-align: center;
+  color: #fff;
+  overflow:hidden;
+}
+
+.member-process .process-box{
+  width:30%;
+  float: left;
+  padding: 0 2em 2em;
+}
+
+.member-process .process-icon {
+  font-size: 4em;
+  line-height: 1em;
+}
+
+.member-process .process-arrow {
+  float: left;
+  width: 5%;
+  height: 5em;
+  line-height: 5em;
+}
+
+.member-process p a {
+  color: white;
+  text-decoration:underline;
+}
+
+
+/* ============================ MOBILE ============================================= */
+
+@media (max-width: 767px) {
+  .member-process .process-box{
+    width:100%;
+  }
+  .member-process .process-arrow {
+    width: 100%;
+    /* Safari */
+    -webkit-transform: rotate(90deg);
+
+    /* Firefox */
+    -moz-transform: rotate(90deg);
+
+    /* IE */
+    -ms-transform: rotate(90deg);
+
+    /* Opera */
+    -o-transform: rotate(90deg);
+
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+
+  }
+
+  .member-process .process-box{
+    padding-bottom: 0;
+  }
+}

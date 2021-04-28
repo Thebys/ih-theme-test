@@ -1,0 +1,63 @@
+/*
+  This file uses mostly deprecated mixins used for the "Banner" functionality.
+ */
+
+@mixin no-hover-underline {
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+  }
+}
+
+@mixin fa-util {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin clearfix {
+  &:after {
+    display: table;
+    height: 0px;
+    width: 0px;
+    clear: both;
+  }
+}
+
+@mixin banner-caption-container {
+  position: absolute;
+  padding: 0;
+  left: 0;
+  right: auto;
+  bottom: 30%;
+  @include clearfix;
+}
+
+@mixin banner-align {
+  display: inline-block;
+  float:left;
+  clear: both;
+  margin:0;
+  padding: 3px 1rem;
+}
+
+@mixin banner-white-text-block {
+  background: rgba(255,255,255,0.7);
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1.285714286em;
+  font-weight: bold;
+  @include banner-align;
+}
+
+@mixin banner-red-text-block {
+  background: change-color( $primary_color, $alpha: 0.7);
+  color: #fff;
+  font-size: 1.857142857em;
+  font-weight: 300;
+  @include banner-align;
+}
+

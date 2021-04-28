@@ -1,0 +1,197 @@
+/*
+  DEPRECATED: Old single event layout. Can be accesed by adding ?old_layout parameter to the URL.
+  TODO: Remove. Not used anymore.
+ */
+.events-single {
+  .media-object.feature-top {
+    margin-bottom: 0;
+  }
+
+  .page-intro {
+    margin-top: 0;
+  }
+
+  article {
+    overflow: hidden;
+    margin-top: 0;
+
+    header {
+      border-bottom: 1px solid $border_color;
+
+      .location {
+        height: 40px;
+        width: 100%;
+        position: relative;
+        padding: 10px 15px;
+        color: $text_color;
+        font-size: 0;
+
+        &:before {
+          content: '';
+          height: 90px;
+          width: 90px;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: -60px;
+          left: 20px;
+          transition: all .15s linear;
+        }
+
+        &:hover:before {
+          transform: scale(1.1);
+        }
+
+        &.k10:before {
+          background-image: url('/wp-content/themes/impacthub/img/locations/k10-happening.png');
+        }
+
+        &.d10:before {
+          background-image: url('/wp-content/themes/impacthub/img/locations/d10-happening.png');
+        }
+      }
+    }
+
+    .entry-content {
+      padding: 20px 6% 30px 6%;
+      color: $text_color;
+
+      p {
+        color: $text_color;
+      }
+
+      a:not(.page-button-new) {
+        color: $primary_color;
+        font-weight: 700;
+      }
+
+      a:not(.page-button-new):hover {
+        text-decoration: underline;
+      }
+
+      img {
+        max-width: 100%;
+        width: auto;
+      }
+    }
+
+    .event-sidebar {
+      border-left: 1px solid $border_color;
+      padding: 20px 15px;
+
+      h2 {
+        font-style: normal;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1em;
+        padding: 0 0 3px 0;
+        margin: 0;
+        border-bottom: 2px solid #000;
+        line-height:1em;
+      }
+
+      p {
+        margin-bottom: .2em;
+      }
+
+      & > div {
+        padding: 1em 0 0.5em;
+      }
+
+      .event-register,
+      .event-cal-links {
+        padding: 0;
+      }
+
+      .event-updated {
+        color: $border_color;
+      }
+
+      .hep-start-time:before {
+        content: '\a';
+        white-space: pre;
+      }
+
+      .event-location {
+        address {
+          margin-bottom: 0;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+
+        a:hover {
+          text-decoration: none;
+        }
+      }
+
+      .page-button {
+        margin: 0.5em 0 0;
+      }
+    }
+  }
+}
+
+#eventbrite-registration {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px 0;
+  float: left;
+  clear: both;
+}
+
+#eventbrite-registration iframe{
+  border: none;
+  min-height: 300px;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 767px)
+{
+  .events-single {
+
+    .event-sidebar {
+      border-top: 1px solid $border_color;
+      padding-top: 30px;
+    }
+
+    .entry-content {
+      padding: 0 0 30px 0;
+
+      iframe {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .feature-top .feature-caption {
+      margin-left: 15px;
+      bottom: 0;
+
+      h3.page-title {
+        font-size: 1.5em;
+      }
+
+      h2.post-title {
+        font-size: 2.7em;
+      }
+
+      h4.post-meta {
+        font-size: 1.4em;
+      }
+    }
+
+    .location {
+      font-size: 0.9em;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

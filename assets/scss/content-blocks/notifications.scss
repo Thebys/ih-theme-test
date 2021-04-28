@@ -1,0 +1,87 @@
+/*
+  Bottom left slide-in notifications.
+ */
+
+.news-notification {
+  position:  fixed;
+  bottom: 20px;
+  left: -250px;
+  width: 250px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  z-index: 300;
+  -moz-transition: left 0.3s linear;
+  -webkit-transition: left 0.3s linear;
+  transition: left 0.3s linear;
+  line-height:0;
+}
+
+.notification-content {
+  text-align: center;
+  padding: 2rem;
+  line-height: normal;
+}
+
+.notification-content p {
+  margin: 0;
+}
+
+.notification-content h2 {
+  line-height: normal;
+  font-size: 1.3em;
+  padding-bottom: 10px;
+}
+
+.notification-content .page-button-new,
+.notification-content .page-button-new:hover,
+.notification-content .page-button-new:active,
+.notification-content .page-button-new:focus {
+  padding: 5px 15px;
+  margin-top: 1rem;
+  border-radius: 3px;
+}
+
+button.notification-close {
+  border: none;
+  background:  none;
+  color: white;
+  text-shadow: black 0px 0px 15px;
+  padding: 1.5rem;
+  font-size: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+button.notification-close,
+button.notification-close:active,
+button.notification-close:focus {
+  outline: none;
+}
+
+button.notification-close i {
+  font-size: 14px;
+}
+
+.news-notification.visible {
+  left: 10px;
+}
+
+.news-notification img {
+  top: -1px;
+  width:100%;
+  min-width:100%;
+}
+
+@media screen and (max-width: 767px) {
+  .news-notification {
+    width:95%;
+    left:-100%;
+    bottom:2.5vw;
+  }
+  .news-notification.visible {
+    width:95%;
+    left:2.5%;
+    bottom:2.5vw;
+  }
+}
+

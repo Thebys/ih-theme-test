@@ -1,0 +1,339 @@
+.office-new {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding: 20px;
+}
+
+.office-new .office-box {
+  width: 33%;
+  padding: 20px;
+}
+
+.office-new .office-box p {
+  margin-top: 20px !important;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.office-new .office-box img {
+  width: 50px;
+  margin: 0 auto;
+  filter: invert(74%) sepia(0%) saturate(162%) hue-rotate(270deg) brightness(96%) contrast(92%);
+}
+
+.office-new.no-filter .office-box img {
+  filter: none !important;
+}
+
+.office-new .office-box p {
+  text-align: center;
+}
+
+// TODO: This is now used on multiple pages. Move to content-blocks.
+.service-benefit-horizontal {
+  img {
+    height: 35px;
+    width: 35px;
+    margin: 21px 30px 21px 0;
+    display: block;
+    align-self: center;
+  }
+
+  figure {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  figcaption {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    border-bottom: 1px solid $border_color;
+    max-width: calc(100% - 65px);
+    padding: 15px 15px 15px 0;
+    text-align: left;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+body .office-banner .featured-office .title {
+  @include page-headline;
+}
+
+// last row of service benefits will have no border
+@media screen and (min-width: 769px) {
+  .elementor-widget-wrap > .elementor-widget.service-benefit-horizontal:last-child figcaption {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 767px)
+{
+  .service-benefit-horizontal img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .office-new .office-box {
+    width: 50%;
+    padding: 30px 5px 0px 5px;
+  }
+  .office-new {
+    padding: 5px 5px 20px 5px;
+  }
+
+  .office-box:nth-child(2),
+  .office-box:nth-child(3),
+  .office-box:nth-child(7),
+  .office-box:nth-child(9) {
+    order: 2;
+  }
+  .office-box:nth-child(6) {
+    order: 1;
+  }
+  .office-box:nth-child(8) {
+    order: 3;
+  }
+
+}
+
+@media screen and (max-width: 300px)
+{
+  .office-box {
+    width: 100%;
+  }
+}
+
+// OLD OFFICES LAYOUT *********************************************************************************************
+// TODO: Ancient, just remove.
+
+.container.membership_columns {
+  padding: 0 8% 50px 8%;
+}
+
+.membership_box {
+  width: 95%;
+  margin: 0 2.5%;
+  text-align: center;
+}
+
+.membership_box .box_header {
+  width: 100%;
+  padding: 40px 20px 15px 20px;
+  color: #fff;
+}
+
+.membership_box .box_header h2 {
+  font-weight: 700;
+  font-size: 20px;
+  font-style: normal;
+  color: inherit;
+}
+
+.membership_box .box_header i {
+  font-size: 55px;
+}
+
+.membership_box .box_header .box_price {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  line-height: normal;
+}
+
+.membership_box .box_header .box_price_small {
+  font-size: 12px;
+}
+
+.membership_box.green_background .box_header {
+  background-color: #24b651;
+}
+
+.membership_box.red_background .box_header {
+  background-color: #812926;
+}
+
+.membership_box.gray_background .box_header {
+  background-color: #303030;
+}
+
+.membership_box .box_content:before {
+  content: ' ';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  margin: -25px auto 0px auto;
+}
+
+.membership_box.green_background .box_content:before {
+  border-top: 15px solid #24b651;
+}
+
+.membership_box.red_background .box_content:before {
+  border-top: 15px solid #812926;
+}
+
+.membership_box.gray_background .box_content:before {
+  border-top: 15px solid #303030;
+}
+
+.membership_box .box_content {
+  width: 100%;
+  padding: 25px 25px 15px 25px;
+  border: 1px solid $border_color;
+  border-top: 0px;
+  color: #5d5d5d;
+  text-align: left;
+  margin-bottom: 6px;
+  line-height: normal;
+  font-size: 15px;
+}
+
+.membership_box .box_content ul {
+  padding-left: 15px;
+}
+
+.membership_box .box_content ul li {
+  margin-bottom: 10px;
+}
+
+.membership_box .box_content li:first-of-type {
+  margin-top: 10px;
+}
+
+.membership_box .box_content p.box_content_intro {
+  margin-bottom: 12px;
+  margin-top: 10px;
+}
+
+.membership_box .box_content a {
+  color: #812926;
+  font-weight: 700;
+}
+
+.membership_box .box_arrow:after,
+.membership_box .box_arrow:before {
+  content: "";
+  position: relative;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom: 0;
+  display: inline;
+  margin: 0 auto;
+}
+
+/* Fill */
+.membership_box .box_arrow:after {
+  bottom: -6px;
+  left: -15px;
+  /* If 1px darken stroke slightly */
+  border-top-color: #fff;
+  border-width: 15px;
+}
+
+/* Stroke */
+.membership_box .box_arrow:before {
+  bottom: -8px;
+  left: 17px;
+  border-top-color: $border_color;
+  border-width: 17px;
+}
+
+.office_box_arrow {
+  width: 75px;
+  float: right;
+  text-align: right;
+}
+
+.office_box_arrow:after,
+.office_box_arrow:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+}
+
+.office_box_arrow:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 24px 28px 24px 0;
+  border-color: transparent #fff transparent transparent;
+
+}
+
+.office_box_arrow:before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 30px 25px 0;
+  border-color: transparent $border_color transparent transparent;
+}
+
+.office_boxes .office_box_arrow:before {
+  left: 28px;
+  top: -31px;
+}
+
+.office_boxes .office_box_arrow:after {
+  left: -1px;
+  top: -33px;
+}
+
+.office_boxes .office_box .office_box_arrow {
+  float: left;
+  text-align: left;
+}
+
+.office_boxes .office_box .office_box_arrow:before {
+  left: 0;
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+
+.office_boxes .office_box .office_box_arrow:after {
+  left: -29px;
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 767px)
+{
+  .office_boxes .office_box_arrow {
+    display: none;
+  }
+}
+
+@media screen and (min-width:992px) and (max-width: 1199px) {
+  .membership_box .box_content {
+    min-height: 470px;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .membership_box .box_content {
+    min-height: 380px;
+  }
+
+  .membership_box .box_content.en {
+    min-height: 435px;
+  }
+}

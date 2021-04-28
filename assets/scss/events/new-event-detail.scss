@@ -1,0 +1,145 @@
+/*
+  Single event layout.
+ */
+
+.single-tribe_events .page-intro h1 {
+  margin-bottom: 0;
+}
+
+.event-details {
+  margin-right: 30px;
+  padding: 30px;
+  border: 1px solid map-get($brand_colors, 'light-grey');
+  min-height: 100%;
+
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 20px;
+
+    a:hover, a:active, a:focus {
+      text-decoration: none;
+      text-shadow: 0.5px 0.5px 0.5px #812926;
+    }
+
+      .icon {
+        padding-left: 15px;
+        font-size: 18px;
+      }
+  }
+
+  table {
+    width: 100%;
+
+    tr {
+      border-top: 1px solid $border_color;
+
+      th, td {
+        padding: 5px 0;
+      }
+
+      th {
+        vertical-align: top;
+        font-weight: normal;
+        font-size: 0.85em;
+        padding-right: 15px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+        font-size: 0.85em;
+        padding-left: 15px;
+      }
+
+      img {
+        display: inline;
+        height: 20px;
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .description {
+    * {
+      font-family: $secondary_font;
+      color: $text_color;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    h1, h2, h3, h4, h5 {
+      text-transform: uppercase;
+      font-size: 1em;
+      line-height: 1;
+    }
+
+    iframe {
+      max-height: 315px;
+      height: calc(100vw * 0.5625);
+      width: 100%;
+    }
+  }
+
+  .c2a-link {
+    margin: 15px;
+  }
+}
+
+.upcoming-events-list {
+  padding: 30px;
+  border: 1px solid $border_color;
+
+  h2 {
+    padding-bottom: 15px;
+    margin-bottom: 0;
+  }
+
+  .event {
+    padding: 10px 0;
+    border-top: 1px solid $border_color;
+
+    .date {
+      font-weight: bold;
+    }
+
+    .title {
+      font-size: 1em;
+      font-weight: normal;
+      color: $text_color;
+      margin-top: 5px;
+    }
+  }
+}
+
+/****************************************** MOBILE ******************************************/
+
+@media screen and (max-width: 991px) {
+  .event-details,
+  .upcoming-events-list {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  .event-details .c2a-link {
+    margin-left: 0;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .feature-top.media-object {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .feature-top.media-object {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

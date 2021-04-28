@@ -1,0 +1,238 @@
+/*
+  Summary of a location with a call to action used on pages where we need to split visitors to different location.
+ */
+
+.loc-wrap {
+  float: none;
+  margin: 0 auto;
+}
+
+.loc-inner {
+  margin: 15px 0;
+}
+
+.loc-det {
+  padding: 20px;
+  border-right: 1px solid $border_color;
+  border-bottom: 1px solid $border_color;
+}
+
+.loc-img:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  background: rgba(34,34,34,0);
+  background: -moz-linear-gradient(top, rgba(34,34,34,0) 0%, rgba(34,34,34,0) 32%, rgba(34,34,34,1) 74%, rgba(34,34,34,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(34,34,34,0)), color-stop(32%, rgba(34,34,34,0)), color-stop(74%, rgba(34,34,34,1)), color-stop(100%, rgba(34,34,34,1)));
+  background: -webkit-linear-gradient(top, rgba(34,34,34,0) 0%, rgba(34,34,34,0) 32%, rgba(34,34,34,1) 74%, rgba(34,34,34,1) 100%);
+  background: -o-linear-gradient(top, rgba(34,34,34,0) 0%, rgba(34,34,34,0) 32%, rgba(34,34,34,1) 74%, rgba(34,34,34,1) 100%);
+  background: -ms-linear-gradient(top, rgba(34,34,34,0) 0%, rgba(34,34,34,0) 32%, rgba(34,34,34,1) 74%, rgba(34,34,34,1) 100%);
+  background: linear-gradient(to bottom, rgba(34,34,34,0) 0%, rgba(34,34,34,0) 32%, rgba(34,34,34,1) 74%, rgba(34,34,34,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#222222', GradientType=0 );
+}
+
+.loc-det img {
+  float: left;
+  height: 50px;
+  padding-right: 1em;
+}
+
+.loc-addr {
+  padding: 14px 0;
+}
+
+.loc-specs {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.loc-specs > .col-xs-4 {
+  padding: 0 15px;
+}
+
+.loc-specs a,
+.loc-specs a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.loc-specs i {
+  font-size: 2.3em;
+  color: #7f7f7f;
+}
+
+.loc-wrap .loc-specs p {
+  font-size: 0.9em;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.loc-wrap .page-button-new.white {
+  position: absolute;
+  bottom: 20px;
+  width: auto;
+  transform: translateX(-50%);
+}
+
+.blog-1 .loc-wrap .page-button-new.white:hover {
+  background: none;
+  color: #fff;
+  border-color: #fff;
+}
+
+.loc-img {
+  position: relative;
+}
+
+#k10-location-map,
+#d10-location-map,
+.location-map {
+  height: 100%;
+}
+
+.tour-open {
+  position: absolute;
+  bottom: 15px;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#virtual-tour iframe {
+  height: 80vh;
+  width: 100%;
+  display: block;
+}
+
+.lightbox .lb-data .lb-close {
+  background: none;
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.8em;
+  text-decoration: none;
+}
+
+.lb-data .lb-close,
+.lb-data,
+.lb-number {
+  color: #fff;
+}
+
+.lightbox .lb-close:before {
+  content: "\e615";
+}
+
+.lightbox .lb-nav a {
+  background: none !important;
+}
+
+.lightbox .lb-nav a.lb-next:before,
+.lightbox .lb-nav a.lb-next:before,
+.lightbox .lb-nav a.lb-prev:before,
+.lightbox .lb-nav a.lb-prev:before {
+  content: '→';
+  display: block;
+  padding: 25px 15px 23px 15px;
+  font-family: 'GT Walsheim Bold', 'Open Sans', sans-serif !important;
+  font-size: 2.5em;
+  color: $text_color;
+  font-weight: bold;
+  background: #fff;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  text-decoration: none;
+}
+
+.lightbox .lb-nav a.lb-prev:before,
+.lightbox .lb-nav a.lb-prev:before {
+  content: '←';
+}
+
+.lightbox .lb-nav a.lb-next:before,
+.lightbox .lb-nav a.lb-next:before {
+  content: '→';
+  right: 0;
+}
+
+.image-location-badge img {
+  position: absolute;
+  height: 50px;
+  top: -70px;
+  transform: translateX(-75px);
+}
+
+@media screen and (max-width: 767px) {
+  .loc-inner .loc-img {
+    order: 2;
+    height: 200px;
+  }
+  .loc-wrap {
+    padding: 0 15px;
+  }
+  .loc-wrap .loc-det {
+    border-left: 1px solid $border_color;
+  }
+  #k10-location-map,
+  #d10-location-map {
+    height: 50vh;
+  }
+
+  #virtual-tour.open {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .loc-specs > .col-xs-4 {
+    padding: 0px 5px;
+  }
+}
+
+/* LOCATION SPECIFICS */
+
+.d10.loc-wrap *::selection {
+  background-color: $d10_primary_color;
+}
+
+.d10.loc-wrap .loc-inner {
+  border-top: 5px solid $d10_primary_color;
+}
+
+.k10.loc-wrap *::selection {
+  background-color: $k10_primary_color;
+}
+
+.k10.loc-wrap .loc-inner {
+  border-top: 5px solid $k10_primary_color;
+}
+
+
+@media screen and (max-width: 768px) {
+  .loc-inner .loc-img {
+    order: 2;
+    height: 200px;
+  }
+  .loc-wrap {
+    padding: 0 15px;
+  }
+  .loc-wrap .loc-det {
+    border-left: 1px solid $border_color;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .loc-specs > .col-xs-4 {
+    padding: 0 5px;
+  }
+}

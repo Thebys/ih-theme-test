@@ -1,0 +1,233 @@
+// New pricelist layout using tarif boxes
+
+// TODO: Tarif boxes are no longer used for space pricelist. Remove.
+.tarif-box.space-pricelist {
+  .inner {
+    box-shadow: none;
+  }
+
+  .head {
+    padding: 20px 0 80px 20px;
+    filter: grayscale(1);
+    text-align: left;
+    background-position: center;
+
+    &.one-line {
+      padding-bottom: calc(80px + 3em);
+    }
+
+    &.three-line {
+      padding-bottom: calc(80px - 3em);
+    }
+
+    &:hover {
+      filter: none;
+
+      * {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background-color: #282828;
+      opacity: 0.66;
+      transition: all 0.3s linear;
+    }
+
+    &:hover:before {
+      opacity: 0;
+    }
+
+    * {
+      transition: all .3s linear;
+    }
+  }
+
+  .name {
+    @include page-headline;
+    text-align: left;
+    position: relative;
+  }
+
+  .price .price-title {
+    @include subheadline;
+  }
+
+  .price .price-subtitle {
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+}
+
+
+// include/exclude VAT switcher
+// TODO: careful, this is used also on the new price list layout
+.onoffswitch {
+  position: relative;
+  float: right;
+  width: 220px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select: none;
+}
+
+.onoffswitch.padd {
+  margin-right: 15px;
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid $primary_color;
+}
+
+.onoffswitch-inner {
+  display: block;
+  width: 100%;
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.onoffswitch-inner:after {
+  content: "S DPH";
+  background-color: $background_gray_color;
+  color: $primary_color;
+}
+
+.onoffswitch-inner.en:after {
+  content: "incl. VAT";
+}
+
+.onoffswitch-inner:before {
+  content: "BEZ DPH";
+  background-color: $primary_color;
+  color: #FFFFFF;
+}
+
+.onoffswitch-inner.en:before {
+  content: "excl. VAT";
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner:after {
+  background-color: $primary_color;
+  color: #FFFFFF;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner:before {
+  background-color: $background_gray_color;
+  color: $primary_color;
+}
+
+// Old pricing table layout
+// TODO: Not used anymore. Remove.
+.table-cover {
+  width: 100%;
+  overflow: auto;
+}
+
+.pricing-table {
+  width: 100%;
+  border: 1px solid $border_color;
+  text-align:center;
+  margin-bottom: 1em;
+}
+
+.pricing-table td, .pricing-table th {
+  padding: 0.5em;
+  border: 1px solid $border_color;
+}
+
+.pricing-table .person-count {
+  font-size: 70%;
+  display: block;
+  clear: both;
+}
+
+.pricing-table th {
+  text-align:center;
+  font-weight:100;
+}
+.pricing-table-price td {
+  background-color: $background_gray_color;
+}
+
+.pricing-table-price td em {
+  display:block;
+  font-style: normal;
+}
+
+.pricing-table tr:first-child {
+  background-color: $background_gray_color;
+  border-bottom:0;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+.pricing-table-timespan,
+.pricing-table tr td:first-child {
+  font-size: 0.8em;
+}
+
+.pricing-table .icon-cross {
+  color: $primary_color;
+}
+
+.pricing-table .icon-check {
+  color: #44A012;
+}
+
+.pricing-table .page-button-new {
+  padding: 5px 12px;
+}
+
+.pricing-table em {
+  font-style: normal;
+}
+
+.pricing-table.rentals th,.pricing-table.rentals td {
+  width: 13%;
+}
+.pricing-table.rentals th:first-child,.pricing-table.rentals td:first-child {
+  width: 10%;
+}
+
+.pricing-table-price.price td {
+  background-color: $primary_color;
+  color: white;
+  font-weight:400;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  html[lang="cs-CZ"] .pricing-table .page-button-new {
+    padding: 4px;
+  }
+}

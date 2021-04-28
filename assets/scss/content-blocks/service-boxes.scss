@@ -1,0 +1,97 @@
+/*
+  Box elements used on homepage & locations pages to present main services.
+
+  TODO: Contains old benefits layout which is no longer used.
+ */
+
+.service-headline {
+  @include page-headline;
+}
+
+.service-box {
+  border: 1px solid $border_color;
+  margin: 0 auto;
+  float: none;;
+}
+
+.service-box.no-photo {
+  border-top: 5px solid $primary_color;
+  padding-top: 15px;
+}
+
+.service-box .text {
+  padding: 25px 40px;
+}
+
+.service-box .buttons {
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.service-box .buttons .page-button-new {
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 0px 2px 10px 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .service-box {
+    width: 95%;
+  }
+
+  .service-box .text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+// Older membership boxes
+
+.membership-boxes {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.membership-box {
+  padding: 1.5rem;
+}
+
+.membership-box .inner {
+  border: 1px solid $border_color;
+  text-align: center;
+}
+
+.membership-box .head {
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+  padding: 33px 0;
+}
+
+.membership-box .content {
+  padding: 2rem;
+  background-color: transparent;
+}
+
+.membership-box h2 {
+  font-family: $secondary_font;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 190%;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 3.7rem;
+  margin: 0;
+}
+
+@media screen and (min-width: 992px) {
+  #one-day-without-commitments h2 {
+    font-size: 130%;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  #one-day-without-commitments h2 {
+    font-size: 160%;
+  }
+}

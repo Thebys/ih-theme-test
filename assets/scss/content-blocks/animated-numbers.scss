@@ -1,0 +1,53 @@
+/*
+  Large numbers that can be used with a JS library that starts counting form 0 to target number when it enters viewport.
+  TODO: Not really used anymore, could be removed after changing homepage and location pages.
+ */
+
+.number-box {
+  float: left;
+  text-align: center;
+  padding: 2em 0;
+}
+
+.number-box span.numbers {
+  font-size: 4em;
+  font-weight: bold;
+  display: block;
+  line-height: 1.2em;
+}
+
+.number-box span.numbers sup {
+  font-size: 0.5em;
+}
+
+.number-box h3,
+.number-box h4,
+.number-box h5 {
+  display: inline;
+  color: inherit;
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 1199px)
+{
+  .number-box span.numbers {
+    font-size: 3em;
+  }
+
+  .number-box h3,
+  .number-box h4,
+  .number-box h5 {
+    font-size: 1em;
+  }
+
+  .number-box {
+    padding: 0.5em 0;
+  }
+}
+
+@media screen and (max-width: 991px)
+{
+  .number-box {
+    font-size: 80%;
+  }
+}

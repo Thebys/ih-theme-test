@@ -1,0 +1,86 @@
+/*
+  This file sets variables that can be used throughout code to ease change of colors, fonts etc.
+ */
+
+$primary_font: 'GT Walsheim Regular', 'Open Sans', sans-serif;
+$primary_font_bold : 'GT Walsheim Bold', 'Open Sans', sans-serif;
+$secondary_font: 'Open Sans', 'Helvetica', sans-serif;
+
+$font_size_base: 14px;
+
+$brand_colors: (
+        "white": #fff,
+        "black": #000,
+        "impact-red": #812926,
+        "red": #c1272d,
+        "light-red": #ee4f3f,
+        "dark-gray": #404040,
+        "gray": #404040, // fix for badly named elements
+        "grey": #404040, // fix for badly named elements
+        "light-gray": #efefed,
+        "light-grey": #efefed, // fix for badly named elements
+        "orange": #f78a3c,
+        "tan": #f6a974,
+        "coral": #ff5353,
+        "ruby": #cf305f,
+        "midnight": #0f3a5f,
+        "blue": #3894c2,
+        "mint": #41bed0,
+        "ocean": #266887,
+        "hunter": #0a5d64,
+        "fern": #3da491,
+        "greenhouse": #7ebb55,
+        "pistachio": #aacb70,
+        "yellow": #ffd546,
+        "transparent": transparent
+);
+
+// Create .bg-, .c-, stroke- and border- classes for every color that can be used ad-hoc
+@each $name, $color in $brand_colors {
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+
+  .c-#{$name} {
+    color: $color !important;
+  }
+
+  .stroke-#{$name} {
+    stroke: $color !important;
+  }
+
+  //TODO: missing '-'
+  .border#{$name} {
+    border-color: $color !important;
+  }
+}
+
+$primary_color: map-get($brand_colors, 'impact-red');
+$d10_primary_color: map-get($brand_colors, 'mint');
+$k10_primary_color: map-get($brand_colors, 'yellow');
+$praha_primary_color: map-get($brand_colors, 'hunter');
+$brno_primary_color: map-get($brand_colors, 'light-red');
+$ostrava_primary_color: map-get($brand_colors, 'blue');
+// This line varies for Praha, Brno and Ostrava and effectively changes the color throughout the whole website.
+$location_primary_color: $praha_primary_color;
+
+$white: #fff;
+$black: #000;
+$text_color: #434343;
+$border_color: #d7d7d7;
+$form_border_color: $border_color;
+$form_notes_color: #999999;
+$form_text_color: #555;
+$form_error_colour: #ee4f3f;
+$link_color: map-get($brand_colors, 'impact-red');
+$background_color: #dadad9;
+$background_gray_color: map-get($brand_colors, 'light-gray');
+
+// Header settings
+$logo_height: 95px;
+$logo_height_sticky: 70px;
+
+$mobile_logo_height: 154px;
+$mobile_logo_height_sticky: 59px;
+
+$tablet_logo_height_sticky: 129px;

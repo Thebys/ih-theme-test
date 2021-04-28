@@ -1,0 +1,143 @@
+// TODO: Should be moved as benefits no longer have separate page but the styles are used on coworking pages.
+.benefits .headline h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.3em;
+  color: $primary_color;
+}
+
+.benefit {
+  overflow: hidden;
+  position: relative;
+}
+
+.benefit .head img {
+  margin: 0 auto;
+}
+
+.benefit .body {
+  background: rgba(239, 239, 237,0.85);
+  position: absolute;
+  top: 250px;
+  padding: 0.5em 1em;
+  transition: all .3s linear;
+  width: 100%;
+  min-height: 100%;
+  text-align:center;
+  overflow: hidden;
+}
+
+.benefit:hover .body {
+  top:0;
+}
+
+.benefit .body p {
+  width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .benefit {
+    padding: 10px 0;
+
+    .body {
+      position: static;
+      min-height: auto;
+      top: 0;
+    }
+
+    .head img {
+      height: 100px;
+      width: auto;
+      transform: scale(1.4)
+    }
+  }
+
+  .coworking-featured-benefits > div > div > .benefit > .body > h4 {
+    display: none;
+  }
+}
+
+/** IMPACT HUB MEMBERSHIP BENEFITS */
+.hub-membership-benefits {
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+}
+
+.hub-membership-benefits * {
+  color: #fff;
+}
+
+.hub-membership-benefits > .inner {
+  background: rgba(193, 39, 45, 0.6);
+}
+
+.hub-membership-benefits .benefit h3 {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+.hub-membership-benefits .benefit {
+  padding: 17px 15px;
+  margin: 15px 0;
+}
+
+.hub-membership-benefits .benefit i {
+  font-size: 3.5em;
+}
+
+.hub-membership-benefits .benefit i,
+.hub-membership-benefits .benefit .name {
+  transition: all .3s linear;
+}
+
+
+.hub-membership-benefits .benefit:hover i,
+.hub-membership-benefits .benefit:hover .name {
+  opacity: 0.2;
+}
+
+.hub-membership-benefits .benefit .body {
+  background: transparent;
+  display: flex;
+  padding:0 15px;
+  left:0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hub-membership-benefits .benefit .body p {
+  padding: 0 30px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .hub-membership-benefits .contained-row {
+    width: 90%;
+  }
+
+  .hub-membership-benefits .benefit {
+    padding: 30px 15px;
+  }
+}
+
+@media screen and (max-width: 969px) {
+  .hub-membership-benefits .contained-row {
+    width: 80%;
+  }
+
+  .hub-membership-benefits .benefit {
+    padding: 30px 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hub-membership-benefits .contained-row {
+    width: 100%;
+  }
+
+  .hub-membership-benefits .benefit {
+    padding: 20px 15px;
+  }
+}

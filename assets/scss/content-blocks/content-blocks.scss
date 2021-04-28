@@ -1,0 +1,76 @@
+/*
+  This file is included from main.scss and just includes styles for each content block.
+ */
+
+// Large numbers that can be used with a JS library that starts counting form 0 to target number when it enters viewport.
+@import "animated-numbers";
+// Cookie prompt.
+@import "cookie-notice";
+// Three columns layout with main perks of a service.
+@import "coworking-perks";
+// An overview of membership tariffs used on all coworking related pages.
+@import "coworking-summary";
+// Element used for presenting prices on coworking pages.
+@import "cross-through";
+// Various call to action elements.
+@import "cta";
+// DEPRECATED: Membership benefits slider used previously on the coworking page.
+@import "custom-slider";
+// Referential badges in web forms
+@import "form-badges";
+// Modal window that works as confirmation after form submission.
+@import "form-confirmation";
+// Headline element used on most pages.
+@import "headline";
+// Homepage hero box.
+@import "homepage-hero-intro";
+// DEPRECATED: Multiple columns Icomoon icons layout.
+@import "icon-boxes";
+// DEPRECATED: Accented section with red background.
+@import "inverted";
+// List item with a title, description, tags and button.
+@import "list-item";
+// Intro section for the loaction pages (D10, K10).
+@import "location-fullscreen-intro";
+// Element that puts Google Map and a slider/additional content side-by-side.
+@import "location-map-slider";
+// Summary of a location with a call to action used on pages where we need to split visitors to different location.
+@import "location-widget";
+// 3 columns layout to present 3 steps process.
+@import "member-process";
+// Modal windows.
+@import "modal";
+// Bottom left slide-in notifications.
+@import "notifications";
+// Main action button with multiple style options.
+@import "page-button";
+// Page intro with headline, intro text, icons and action button.
+@import "page-intro";
+// Section with logos
+@import "partner-logos";
+// Post summary displayed on a page where we list recent/featured posts.
+@import "post-thumbnail";
+// Table element to present multiple prices for a service.
+@import "pricing-table";
+// Box elements used on homepage & locations pages to present main services.
+@import "service-boxes";
+// Compact presentation of our main services.
+@import "service-tiles";
+// Sliders implemented using Swiper.js library.
+@import "sliders";
+// DEPRECATED: Floating social links element on homepage.
+@import "social-icons";
+// Tags used in different places to highlight an attribute of a service.
+@import "tag";
+// DEPRECATED: Membership tariffs.
+@import "tarif-boxes";
+// Tags
+@import "tag";
+// Team member profile on team page.
+@import "team";
+// Layout for testimonials and partner logos.
+@import "testimonial";
+// Rectangular image with red overlay used for spaces, coffee breaks and promotion packs.
+@import "toggle-square";
+// Tooltips hooked to data-tooltip HTML attribute which display tooltips on hover.
+@import "tooltips";

@@ -1,0 +1,336 @@
+/*
+  This file configures various CSS classes that are used throughout the website.
+ */
+
+/********************************* FLEX BOX LAYOUT *********************************/
+
+.flex-boxes,
+.flex-boxes .cfct-mod-content {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 *
+	display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-boxes.clearfix:before,
+.flex-boxes.clearfix:after {
+  content:normal;
+}
+
+.valign-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.halign-center,
+.halign-center .cfct-mod-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px)
+{
+  .flex-boxes,
+  .flex-boxes .cfct-mod-content {
+    justify-content: space-around;
+  }
+
+  .mobile-order-change,
+  .mobile-order-change > .elementor-container {
+    flex-direction: column-reverse;
+  }
+}
+
+/********************************* TEXT MODIFIERS *********************************/
+
+.text-light {
+  font-weight: 100;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+.text-bold,
+.text-strong {
+  font-weight: 800;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.center,
+.text-center {
+  text-align: center;
+}
+
+.text-smaller,
+p.note,
+.note {
+  font-size: 0.8em;
+  padding-bottom: 5px;
+}
+
+.line-height-15em {
+  line-height: 1.5em;
+}
+
+.font-size-3rem {
+  font-size: 3rem;
+}
+
+.font-size-reset {
+  font-size: 1em;
+}
+
+/********************************* SECTION BORDERS *********************************/
+
+.section-border-top {
+  border-top: 1px solid $border_color;
+}
+
+.section-border-bottom {
+  border-bottom: 1px solid $border_color;
+}
+
+.section-border-red-top {
+  border-top: 3px solid $primary_color;
+}
+
+.section-border-red-bottom {
+  border-bottom: 3px solid $primary_color;
+}
+
+.border-top-divider {
+  border-top: 1px solid $border_color;
+}
+
+@media (max-width: 768px) {
+  .border-top-divider {
+    border-top: 0;
+  }
+}
+
+/********************************* PADDING & MARGIN HELPERS *********************************/
+
+.padding-30 {
+  padding: 30px !important;
+}
+
+.padding-top-30 {
+  padding-top: 30px !important;
+}
+
+.padding-bottom-30 {
+  padding-bottom: 30px !important;
+}
+
+.padding-top-bottom-30 {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+
+.padding-top-50 {
+  padding-top: 50px !important;
+}
+
+.padding-bottom-50 {
+  padding-bottom: 50px !important;
+}
+
+.padding-top-bottom-50 {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+.padding-right-15 {
+  padding-right: 15px;
+}
+
+.no-padd-top {
+  padding-top: 0 !important;
+}
+
+.no-padd-bottom {
+  padding-bottom: 0 !important;
+}
+
+.margin-top-bottom-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.margin-top-bottom-15 {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+
+.margin-top-15 {
+  margin-top: 15px !important;
+}
+
+.margin-bottom-15 {
+  margin-bottom: 15px !important;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.top-space {
+  margin-top: 50px !important;
+}
+
+/********************************* LIST MODIFIERS *********************************/
+
+// Centering list, not centering each list item
+ul.list-center,
+.list-center ul {
+  display: inline-block;
+  text-align: left;
+}
+
+.list-center .elementor-text-editor {
+  text-align: center;
+  // enables centering when Elementor text editor is used
+}
+
+// Instead of bullet points, a plus sign is used
+ul.list-plus,
+.list-plus ul {
+  list-style-type: none;
+}
+
+ul.list-plus li,
+.list-plus ul li {
+  padding-left: 10px;
+}
+
+ul.list-plus li:before,
+.list-plus ul li:before {
+  content: "+";
+  font-weight:800;
+  position: absolute;
+  margin-left: -10px;
+}
+
+// Instead of bullet points a ✔ or ❌ is used
+ul li {
+  &.included,
+  &.not-included {
+    list-style: none;
+    padding-left: 2em;
+
+    &:before {
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin-left: -2em;
+      display: inline-block;
+      width: 2em;
+    }
+  }
+
+  &.included:before {
+    content: '\e62a';
+    color: #24b651;
+  }
+
+  &.not-included:before {
+    content: '\e615';
+    color: map-get($brand_colors, "red");
+  }
+}
+
+/********************************* OTHERS *********************************/
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+body .image-fill-container,
+.elementor-widget-image.image-fill-container img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.elementor-widget-image.image-fill-container .elementor-widget-container,
+.elementor-widget-image.image-fill-container .elementor-widget-container .elementor-image {
+  height: 100%;
+}
+
+.grayscale-image {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+  -moz-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.background-image-center {
+  background-position: center center;
+  background-size: cover;
+}
+
+.red-overlay {
+  background: change-color(map-get($brand_colors, "red"), $alpha: 0.6);
+}
+
+.elementor-section-wrap section.light_gray_row,
+.light_gray_row {
+  background: map-get($brand_colors, "light-gray");
+}
+
+.text-color-white {
+  color: $white !important;
+}
+
+.background-blue {
+  background-color: map-get($brand_colors, "blue");
+}
+
+.background-pink {
+  background-color: map-get($brand_colors, "light-red");
+}
+
+/*** Google Places review stars ***/
+.google-review-stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+
+  display: inline-block;
+  font-size: 16px;
+  font-family: Times; // make sure ★ appears correctly
+  line-height: 1;
+
+  &::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #fc0 var(--percent), #fff var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

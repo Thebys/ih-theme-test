@@ -1,0 +1,68 @@
+/*
+  This file is included from main.scss and contains styles for the complete events functionality.
+ */
+
+// DEPRECATED: Old single event layout. Can be accesed by adding ?old_layout parameter to the URL.
+@import "event-detail";
+// DEPRECATED: Old layout of the events calendar.
+@import "events-calendar";
+
+// Featured events displayed above the events calendar.
+@import "featured-events";
+// List of events for a month.
+@import "new-calendar";
+// Single event layout.
+@import "new-event-detail";
+// Modal video that can open from the section with featured events.
+@import "video-modal";
+
+//TODO: This can be removed as there are no longer pages for specific event types ("Co se u nas deje")
+.events-button {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.event-boxes {
+  text-align:center;
+  padding: 3em 0;
+}
+
+.event-boxes > div {
+  padding:0 3em;
+}
+
+.event-boxes .page-button-new {
+  margin-top: 15px;
+}
+
+.event-boxes.no-padd-bottom {
+  padding:3em 0 0;
+}
+
+.event-boxes.no-padd-top {
+  padding:0 0 3em;
+}
+
+.event-boxes > div  h4 {
+  font-size: 1.3em;
+  color:#812926;
+}
+
+.event-boxes > div  p {
+  margin-bottom: 15px;
+}
+
+.event-boxes > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-boxes > div > a.page-button-new {
+  margin-top: auto;
+}
+
+.member-process.czechitas_boxes .process-box {
+  width: 33.3333333%;
+  padding: 0 4% 1% 4%;
+}

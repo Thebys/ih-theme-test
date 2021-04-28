@@ -1,0 +1,69 @@
+/*
+  Stories pagination.
+ */
+.pagination {
+  width: 100%;
+  @include clearfix;
+}
+
+.wp-pagenavi {
+  border-top: 1px solid $border_color;
+  border-bottom: 1px solid $border_color;
+  line-height: 2.4em;
+  position: relative;
+
+  .pages, .extend {
+    display: none;
+  }
+
+  & > *:first-child {
+    & + .current,
+    & + .first,
+    & + .previouspostslink + a {
+      border-left: none;
+    }
+
+  }
+
+  a, .current {
+    color: $border_color;
+    display: inline-block;
+    width: 2.4em;
+    text-align: center;
+    border-left: 1px solid $border_color;
+
+    &:hover, &:focus, &:active {
+      color: $link_color;
+    }
+  }
+
+  i {
+    display: inline-block;
+    font-size: 2.5em;
+    line-height: 1px;
+    padding-bottom: 4px;
+    vertical-align: middle;
+  }
+
+  .nextpostslink,
+  .previouspostslink,
+  .last,
+  .first {
+    color: $border_color;
+    @include no-hover-underline;
+  }
+
+  .current {
+    color: $link_color;
+  }
+
+  .nextpostslink {
+    position: absolute;
+    right: 0;
+  }
+
+  .previouspostslink {
+    position: absolute;
+    right: 2.4em;
+  }
+}

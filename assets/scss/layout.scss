@@ -1,0 +1,153 @@
+/*
+  This file contains styles for the main structure of the website and defines some default
+  behavior for various HTML elements.
+ */
+
+body {
+  padding-right: 0 !important;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $primary_color;
+  
+  &:hover {
+    color: $primary_color;
+    text-decoration: underline;
+  }
+}
+
+p {
+  max-width: 100%;
+}
+
+img[src=""] {
+  display: none;
+}
+
+hr {
+  margin: 23px 0;
+  border-top-color: $border_color;
+}
+
+ul, ol {
+  padding: 0;
+  list-style-position: inside;
+}
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12,
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12
+{
+  padding-left:0;
+  padding-right:0;
+}
+
+.contained-row,
+.elementor-element.contained-row {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  overflow: auto;
+  clear: both;
+}
+
+.elementor-section.gray-boxed .elementor-widget-wrap.elementor-element-populated,
+.gray-boxed:not(.elementor-section) {
+  background-color: $background_gray_color;
+  //normally .elementor-widget-wrap would have horizontal padding of 10px on each side so the width of grey box
+  //would be 80% of that but here we resize the .elementor-widget-wrap so we need to count the width based on
+  //width of container minus the padding
+  max-width: calc(0.8 * (100% - 20px));
+  margin: 0 auto;
+  padding: 60px 60px;
+  border: 1px solid $border_color;
+}
+
+.gray-boxed:not(.elementor-section) {
+  max-width: 80%;
+}
+
+.contained-row .gray-boxed:not(.elementor-element) {
+  max-width: 100%;
+}
+
+.media {
+  overflow: auto;
+}
+
+/* ============================ MOBILE ============================================= */
+
+@media (max-width: 767px) {
+  .contained-row {
+    width:100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .elementor-section.gray-boxed .elementor-widget-wrap.elementor-element-populated,
+  .gray-boxed:not(.elementor-section) {
+    padding: 30px 15px;
+  }
+}
+
+/* NEW LAYOUT */
+
+main {
+  background-color: $background_color;
+}
+
+main .elementor-top-section:not(.bg-transparent) > .elementor-container {
+  background: $white;
+}
+
+main .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated,
+.elementor-column-gap-default > .elementor-column > .elementor-element-populated {
+  padding: 0;
+}
+
+main .elementor-widget {
+  margin-bottom: 0;
+}
+
+body .container {
+  padding: 0;
+}
+
+header .main-menu .container,
+.wrapper.container,
+.page-banner.container,
+.feature-top.container,
+.page-template-page_calendar main .calendar-content.container {
+  background: $white;
+}
+
+.social-links {
+  z-index: auto;
+}
+
+
+@media screen and (min-width: 768px) {
+  .elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 750px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 970px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 1170px;
+  }
+}

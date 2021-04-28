@@ -1,0 +1,223 @@
+/*
+  This file is included from main.scss and contains styles for the complete stories functionality.
+ */
+
+// Stories pagination.
+@import "pagination-sorting";
+// Slideslive videos inserted among stories.
+@import "slideslive-story";
+
+// Styles for the stories page.
+.stories-loop {
+  background: #fff;
+}
+
+.stories-loop .media {
+  padding: 15px;
+}
+
+.stories-loop .media:first-child {
+  margin-top: 15px;
+}
+
+.post-excerpt *  {
+  font-weight: normal;
+  font-size: 1em;
+  text-transform: none;
+}
+
+.media {
+  .media-heading  {
+    margin-bottom: 4px;
+    a {
+      color: $primary_color;
+    }
+  }
+
+  .media-object {
+    margin-bottom: .8em;
+  }
+
+  .post-info {
+    margin: 9px 0;
+    line-height: 1.4em;
+  }
+}
+
+
+// Styles for a single story page.
+.feature-top.media-object {
+  position: relative;
+  margin-bottom: 2em;
+
+  .feature-caption {
+    @include banner-caption-container;
+  }
+
+  .page-title, .post-meta {
+    @include banner-white-text-block;
+  }
+
+  .post-title {
+    @include banner-red-text-block;
+  }
+
+  .post-meta {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 2em;
+
+  }
+}
+
+.single {
+  article.post {
+    padding: 0 11em 3em;
+
+    .entry-content {
+      @include clearfix;
+    }
+  }
+}
+
+.single .entry-content iframe {
+  max-height: 415px;
+  height: 56.25vw;
+  width: 100%;
+}
+
+.single .entry-content p {
+  font-size: 15px;
+}
+
+// Similar posts on single stories page.
+// TODO: We don't use it anymore, remove.
+aside.similar-posts {
+  border-top: 1.2em solid $background_color;
+}
+
+aside.similar-posts .headline {
+  text-align: center;
+  width: 100%;
+  margin-top: 0px;
+}
+
+// Author details on single stories page.
+.about-author {
+  background: map-get($brand_colors, "light-red");
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.about-author img {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.about-author p.intro {
+  font-size: 0.9em;
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+
+.about-author .social span {
+  display: none;
+}
+
+.about-author .social a {
+  font-size: 1.2em;
+  padding: 0 0.4em;
+}
+
+.about-author .social a:hover {
+  text-decoration: none;
+}
+
+.about-author * {
+  color: #fff;
+}
+
+.about-author h3 {
+  font-weight: bold;
+  margin:0;
+  padding-bottom: 1em;
+}
+
+.about-author .details {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+@media screen and (max-width: 767px) {
+  .about-author {
+    text-align: center;
+  }
+
+  .single article.post {
+    padding: 0 2em 3em
+  }
+}
+
+// Story Infobox shortcode
+.story-infobox {
+  width: 40%;
+  padding: 15px;
+  border: 1px solid $border_color;
+  text-align: left;
+  background-color: white;
+}
+
+.story-infobox.left {
+  float: left;
+  margin: 15px 25px 15px 0px;
+}
+
+.story-infobox.right {
+  float: right;
+  margin: 15px 0px 15px 25px;
+}
+.story-infobox .caption{
+  width: 100%;
+  border-bottom: 1px solid $border_color;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 991px) {
+  .story-infobox {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .story-infobox {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+.recent-stories-sidebar {
+  padding: 30px;
+  border: 1px solid $border_color;
+
+  h2 {
+    padding-bottom: 15px;
+  }
+
+  .story {
+    padding: 10px 0;
+    border-top: 1px solid $border_color;
+
+    .title {
+      font-weight: bold;
+    }
+  }
+}
+
+.recent-stories-sidebar a {
+  line-height: 1.2;
+}
+
+.back-to-posts {
+  margin-top: 20px;
+}

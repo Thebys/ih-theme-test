@@ -1,0 +1,243 @@
+// Specific for Ostrava.
+// TODO: Used in 2018 for the last time. Just remove.
+
+.page-id-10304 .content {
+  background-position: center top;
+  background-image: url('/wp-content/uploads/2018/11/hub-ostrava-narozeniny-2018.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  padding-bottom: 1.2rem;
+}
+
+.page-id-10304 .bottom-line {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .page-id-10304 .content {
+    background-size: auto 800px;
+    background-image: url('/wp-content/uploads/2018/11/ostrava-narozeniny-2018-v1-mobile.jpg');
+  }
+}
+
+.birthday-intro {
+  font-family: 'Hand Of Sean', 'Open Sans', sans-serif;
+  text-shadow: 2px 2px 2px #222222;
+}
+
+.birthday-intro .hashtag {
+  font-size: 5rem;
+  color: #fff;
+  display: inline-block;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.birthday-intro .date,
+.birthday-intro .location {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.birthday-intro .page-button-new {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 30px;
+  text-shadow: none;
+  font-size: 1.3em;
+}
+
+
+#modal-vote .gfield_description:not(.validation_message) {
+  text-transform: uppercase;
+  color: #0f3a5f;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 20px 0 10px 0;
+}
+
+#modal-vote li input[type=text] {
+  width: 90%;
+  float: left;
+}
+
+#modal-vote ul::after,
+#modal-vote li::after {
+  content: '';
+  display: table;
+  width:100%;
+  font-size:0;
+}
+
+/* 2018 */
+
+.page-id-10304 .content .headline h1,
+.page-id-10304 .content .headline h2,
+.page-id-10304 .content h3 {
+  color: #0f3a5f;
+}
+
+.page-id-10304 .content .page-button-new:not(.transparent) {
+  background: #0f3a5f;
+  border-color: #0f3a5f;
+}
+
+.page-id-10304 .content .page-button-new:not(.transparent):hover {
+  background: white;
+  color: #0f3a5f;
+}
+
+.page-id-10304 .content .page-button-new.transparent:hover {
+  color: #0f3a5f;
+}
+
+.nomination-border-right {
+  border-right: 3px dashed #0f3a5f;
+}
+
+.video-invitation-cover {
+  background: #000;
+}
+
+.video-invitation-cover video {
+  display: block;
+  width:100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  .nomination-border-right {
+    border-right: none;
+  }
+}
+/*
+2017
+
+.birthday-filters .text-icon {
+	cursor: pointer;
+	transition: color .3s linear;
+	padding: 2rem;
+}
+
+.birthday-filters .text-icon.selected p {
+	text-decoration: underline;
+}
+
+.birthday-filters .text-icon.selected,
+.birthday-filters .text-icon:hover {
+	color: #812926;
+}
+
+.birthday-filters .text-icon i,
+.birthday-filterable .team-member .accelerators span i {
+	font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.birthday-filterable .team-member .image-overlay {
+	top: 0;
+}
+
+.birthday-filterable .team-member .accelerators span i {
+	color: #fff;
+	display: inline-block;
+	font-size: 2rem;
+}
+
+.birthday-filterable .team-member .accelerators span i::before {
+	padding: 0 5px;
+}
+
+.birthday-filters .text-icon#c1 i::before,
+.birthday-filterable .team-member.c1 .accelerators .c1 i::before {
+	content: "\e622";
+}
+
+.birthday-filters .text-icon#c2 i::before,
+.birthday-filterable .team-member.c2 .accelerators .c2 i::before {
+	content: "\e809";
+}
+
+.birthday-filters .text-icon#c3 i::before,
+.birthday-filterable .team-member.c3 .accelerators .c3 i::before {
+	content: "\e80e";
+}
+
+.birthday-filters .text-icon#c4 i::before,
+.birthday-filterable .team-member.c4 .accelerators .c4 i::before {
+	content: "\e610";
+}
+
+.birthday-filters .text-icon#c5 i::before,
+.birthday-filterable .team-member.c5 .accelerators .c5 i::before {
+	content: "\e697";
+}
+
+.birthday-filters .text-icon#c6 i::before,
+.birthday-filterable .team-member.c6 .accelerators .c6 i::before {
+	content: "\e638";
+}
+
+.birthday-filters .text-icon#c7 i::before,
+.birthday-filterable .team-member.c7 .accelerators .c7 i::before {
+	content: "\e637";
+}
+
+.birthday-filters .text-icon#c8 i::before,
+.birthday-filterable .team-member.c8 .accelerators .c8 i::before {
+	content: "\e64c";
+}
+
+.birthday-filters .text-icon#c9 i::before,
+.birthday-filterable .team-member.c9 .accelerators .c9 i::before {
+	content: "\e630";
+}
+
+.birthday-filters .text-icon#c10 i::before,
+.birthday-filterable .team-member.c10 .accelerators .c10 i::before {
+	content: "\e62f";
+}
+
+.birthday-filters .text-icon#c11 i::before,
+.birthday-filterable .team-member.c11 .accelerators .c11 i::before {
+	content: "\e624";
+}
+
+.birthday-share {
+	width: 19%;
+	padding: 30px 1%;
+	text-align: center;
+}
+
+.birthday-share img {
+	border-radius: 50%;
+	width: 140px;
+	margin: 0 auto;
+}
+
+.birthday-share h3 {
+	font-weight: bold;
+}
+
+.birthday-share span {
+	display: inline-block;
+}
+
+@media screen and (max-width: 991px) {
+	.birthday-share {
+		width: 49%;
+		padding-left: 5%;
+		padding-right: 5%;
+		text-align: center;
+	}
+
+	.birthday-share h3 br {
+		display: none;
+	}
+}*/

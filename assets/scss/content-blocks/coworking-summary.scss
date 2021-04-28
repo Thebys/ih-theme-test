@@ -1,0 +1,71 @@
+/*
+  An overview of membership tariffs used on all coworking related pages.
+ */
+
+.membership-summary {
+  border: 1px solid $border_color;
+  padding: 60px 60px 20px 60px;
+
+  .featured-tariff-wrapper:hover,
+  .featured-tariff-wrapper:active,
+  .featured-tariff-wrapper:visited,
+  .featured-tariff-wrapper:focus {
+    text-decoration:none;
+  }
+
+  .featured-tariff {
+    padding: 30px;
+    margin: 0 auto 15px auto;
+    position: relative;
+    z-index: 0;
+
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      opacity: 0.8;
+
+      img {
+        filter: brightness(1.5);
+      }
+    }
+
+    .title {
+      margin-top: 0;
+      @include page-headline;
+    }
+
+    .title+.tag {
+      margin-left: 0;
+    }
+
+    p {
+      font-size: 1.2em;
+      padding-top: 15px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0, 100;
+  }
+}
+
+/****************************************** MOBILE ******************************************/
+
+@media screen and (max-width: 990px) {
+  .membership-summary {
+    padding: 30px 30px 20px 30px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .membership-summary {
+    padding: 30px 15px 20px 15px;
+  }
+}

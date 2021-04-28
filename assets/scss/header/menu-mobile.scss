@@ -1,0 +1,133 @@
+/*
+  Header menu on mobile.
+ */
+
+/* ------------ MOBILE HORIZONTAL DROPDOWN MENU ----------- */
+@media screen and (max-width: 799px) {
+  .main-menu .navigation {
+    overflow-x: auto;
+    white-space: nowrap;
+
+    li a {
+      padding: 20px 10px;
+    }
+
+    .dropdown:not(.open) .dropdown-menu {
+      display: none;
+    }
+
+    li.open > .dropdown-menu {
+      visibility: visible;
+      opacity: 1;
+      overflow: auto;
+      white-space: nowrap;
+      left: 0;
+      width: 100%;
+      border: none;
+      padding: 0;
+
+      li {
+        width: auto;
+        display: inline-block;
+
+        a {
+          padding: 20px 10px;
+        }
+      }
+    }
+  }
+}
+
+/* -------------- STICKY MOBILE MENU -------------- */
+
+.elementor-menu-anchor {
+  position: absolute;
+  top: -1 * $logo_height;
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    padding-top: $mobile_logo_height;
+    background-position: center $mobile_logo_height;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 992px) {
+  .stickyMainMenu main {
+    padding-top: $tablet_logo_height_sticky;
+    background-position: center $tablet_logo_height_sticky;
+  }
+
+  .elementor-menu-anchor {
+    position: absolute;
+    top: -1 * $mobile_logo_height;
+  }
+}
+
+@media screen and (max-width: 799px)
+{
+  .stickyMainMenu {
+
+    main {
+      padding-top: $mobile_logo_height_sticky;
+      background-position: center $mobile_logo_height_sticky;
+    }
+
+    .main-menu {
+      background: white;
+      width: 100%;
+      text-align: center;
+      top: 0;
+      position: fixed;
+    }
+
+    .brand {
+      display: none;
+    }
+
+    .dropdown.open .dropdown-menu {
+      box-shadow: 0px 16px 16px -15px rgb(48, 48, 48);
+      -webkit-box-shadow: 0px 16px 16px -15px rgb(48, 48, 48);
+      -moz-box-shadow: 0px 16px 16px -15px rgb(48, 48, 48);
+    }
+  }
+
+  .elementor-menu-anchor {
+    position: absolute;
+    top: -1 * $mobile_logo_height;
+  }
+}
+
+/* --------------- WHITE OVERLAY MOBILE MENU --------------- */
+@media screen and (max-width: 799px)
+{
+  .main-menu .navigation {
+
+    ul,
+    .dropdown-menu ul {
+      padding-right: 40px;
+      padding-left: 15px;
+    }
+
+    &:after {
+      content: "";
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.0) 0%, rgba(255, 255, 255, 0.5) 30%, rgba(255, 255, 255, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1); /* IE6-9 */
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 80px;
+      pointer-events: none;
+      z-index: 100002;
+      height: 59px;
+    }
+
+    &.dropdown-open:after {
+      height: 118px;
+      bottom: -59px;
+    }
+  }
+}
+

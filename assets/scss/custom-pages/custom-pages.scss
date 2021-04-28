@@ -1,0 +1,38 @@
+/*
+  This file is included from main.scss and just includes styles for each page that needs additional styling.
+  Keep in mind that all the styles are present on all pages of the website so you need to use CSS classes to make
+  the rules work only where you need them to.
+
+  Hopefully the names of files are self explanatory, I will just note the ones that are deprecated.
+ */
+
+@import "about-us";
+@import "acceleration";
+@import "alumni";
+@import "arrange-meeting";
+//DEPRECATED
+@import "benefits";
+//DEPRECATED
+@import "birthday";
+//DEPRECATED
+@import "business-pass";
+//DEPRECATED
+@import "connect";
+@import "contact";
+//DEPRECATED
+@import "coworking";
+//DEPRECATED
+@import "day-pass";
+//DEPRECATED
+@import "event-marketing-academy";
+@import "experts";
+@import "for-media";
+@import "hire";
+@import "homepage";
+//DEPRECATED
+@import "hr-akademie";
+@import "office";
+//DEPRECATED
+@import "pricelist";
+@import "search";
+@import "spaces";

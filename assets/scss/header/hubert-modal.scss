@@ -1,0 +1,32 @@
+/*
+  DEPRECATED: Modal window with options to login to K10/D10 Hubert.
+  TODO: Remove, we don't need it anymore.
+ */
+
+/* -------------- HUBERT MODAL LOGIN -------------- */
+.hubert-modal {
+  .flex-login {
+    display: flex;
+    padding-bottom: 15px;
+    justify-content: space-evenly;
+    text-align: center;
+
+    a {
+      font-weight: 700;
+      font-size: 1.1em;
+
+      img {
+        width: 70px;
+        margin: 0 auto;
+      }
+
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .text-center.line-height-15em.font-size-reset {
+    padding: 10px;
+  }
+}

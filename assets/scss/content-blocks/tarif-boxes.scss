@@ -1,0 +1,190 @@
+/*
+  DEPRECATED: Membership tariffs.
+
+  TODO: Not used on coworking, used on acceleration page though. Refactor, simplify.
+
+ */
+
+.tarif-box {
+  padding: 15px 15px 30px 15px;
+
+  &.open, &:hover {
+    .inner {
+      max-height: 1050px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    .overlay {
+      visibility: hidden;
+      max-width: 1200px;
+    }
+
+    .action-button {
+      margin-top: 15px;
+      max-height: 250px;
+      opacity: 1;
+    }
+  }
+
+  .inner {
+    border: 1px solid $border_color;
+    text-align:center;
+    max-height: 335px;
+    overflow: hidden;
+    position:relative;
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+  }
+
+  .head {
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    padding: 30px 0;
+    position: relative;
+  }
+
+  .body {
+    padding: 30px 20px;
+    border-top: 1px solid $border_color;
+  }
+
+  .overlay {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+72,ffffff+100&0+72,1+99 */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 72%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 72%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 72%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+    visibility: visible;
+    max-width: 1000px;
+  }
+
+  .name {
+    margin: 0 0 5px;
+    color: #fff;
+    text-align: center;
+    @include page-headline;
+  }
+
+  .capacity {
+    color: #fff;
+    position: relative;
+  }
+
+  .name.shadow,
+  .capacity.shadow {
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.51);
+    box-shadow: none;
+  }
+
+  .services {
+    padding-top: 10px;
+
+    i {
+      font-size: 130%;
+      margin: 0 5px;
+      display: inline-block;
+      color: #fff;
+    }
+  }
+
+  .price {
+    padding: 20px 0;
+    border-bottom: 1px solid $border_color;
+
+    &:nth-of-type(2n) {
+      background: #fff;
+    }
+
+    &:nth-of-type(2n + 1) {
+      background: map-get($brand_colors, "light-gray");
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0 auto;
+    text-align:left;
+    display:inline-block;
+  }
+
+  .action-button {
+    margin-top: 0;
+    text-align: center;
+    opacity: 0;
+    max-height: 0;
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+    overflow: hidden;
+
+    .page-button-new {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.business-conditions-notice {
+  text-align: center;
+}
+
+.tarif-box a:not(.page-button-new),
+.business-conditions-notice a {
+  color: $primary_color;
+  text-decoration: underline;
+}
+
+.tarif-separator-3,
+.tarif-separator-2 {
+  display: none;
+  height: 1px;
+}
+
+@media screen and (min-width: 530px) and (max-width: 767px)
+{
+  .col-xs-12.tarif-box {
+    width: 50%;
+    float:left;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tarif-separator-3 {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .tarif-separator-2 {
+    display: block;
+  }
+}

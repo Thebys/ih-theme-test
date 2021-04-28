@@ -1,0 +1,164 @@
+/*
+  Rectangular image with red overlay used for spaces, coffee breaks and promotion packs.
+ */
+
+.toggle-square {
+  width: 33.3333333333%;
+  float:left;
+  position: relative;
+
+  //reset for bootstrap's .small class
+  &.small {
+    font-size: 100%;
+  }
+
+  &.one-half {
+    width: 50%;
+
+    h3.post-info {
+      @include regular-text;
+      color: inherit;
+    }
+  }
+}
+
+.toggle-square-wrapper a {
+  display:block;
+  height:100%;
+  width:100%;
+}
+
+.toggle-square
+
+.toggle-square.mashup-square {
+  height: 259px;
+  overflow: hidden;
+}
+
+.toggle-square-head {
+  position: relative;
+}
+
+.toggle-square-body {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: none;
+  text-align: center;
+}
+
+.toggle-square-body {
+  background: change-color(map-get($brand_colors, "red"), $alpha: 0.6);
+}
+
+.toggle-square:hover .toggle-square-body {
+  background: transparent;
+}
+
+.toggle-square-body,
+.toggle-square-body * {
+  opacity: 1;
+  -moz-transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.toggle-square-body:hover .toggle-square-text > *:not(.page-button) {
+  visibility:hidden;
+  opacity: 0;
+}
+
+.toggle-square-body:hover .toggle-square-text .square-icon {
+  visibility:hidden;
+}
+
+.toggle-square .toggle-square-body {
+  color: #fff;
+
+  .toggle-square-text {
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+    padding: 0 0.5em;
+    width: 100%;
+
+    .price-info {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.square-icon {
+  margin-bottom: 0.5em;
+
+  span {
+    padding-left: 0.5rem;
+  }
+}
+
+.mashup-square .toggle-square-head {
+  height: 100%;
+}
+
+.toggle-square-body:hover .page-button {
+  vertical-align: middle;
+  background: $primary_color;
+  min-height: 2em;
+  line-height: 2em;
+  color: white;
+  display: inline-block;
+  border-color: transparent;
+  margin: 0.5em 0;
+}
+
+/* ============================ MOBILE ============================================= */
+
+@media (max-width: 992px) {
+  .toggle-square,
+  .toggle-square.one-half {
+    width: 100%;
+  }
+
+  .toggle-square img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+// Toggle square spaces
+
+.toggle-square.space .space-location-badge {
+  content: '';
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.toggle-square.space.d10 .space-location-badge {
+  background-image: url('/wp-content/themes/impacthub/assets/img/locations/d10-loc-badge.png');
+}
+
+.toggle-square.space.k10 .space-location-badge {
+  background-image: url('/wp-content/themes/impacthub/assets/img/locations/k10-loc-badge.png');
+}
+
+@media screen and (min-width: 991px) and (max-width: 1199px) {
+  .toggle-square.space:after {
+    top: 20px;
+  }
+}

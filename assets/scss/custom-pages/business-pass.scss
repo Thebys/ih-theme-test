@@ -1,0 +1,26 @@
+// Specific for Brno.
+// TODO: Service doesn't exist anymore. Remove.
+
+.bp.member-process > div {
+  padding: 1rem 4% 2rem;
+}
+
+.quote.headline {
+  margin-top: 0;
+  padding: 30px 0;
+}
+
+.quote.headline > p {
+  text-align: right !important;
+}
+
+.business-pass-cta p {
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .quote.headline {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

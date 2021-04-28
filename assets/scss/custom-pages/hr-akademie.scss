@@ -1,0 +1,45 @@
+// Specific for Ostrava.
+// TODO: Can be removed. HR Academy is no longer running.
+
+.hr-akademie .text-icon {
+  padding-left:1rem;
+  padding-right:1rem;
+}
+
+.timeline-panel {
+  padding: 30px 15px;
+}
+
+ul.timeline.narrow:before {
+  left: 40px;
+}
+
+ul.timeline.narrow > li > .timeline-panel {
+  width: calc(100% - 90px);
+  width: -moz-calc(100% - 90px);
+  width: -webkit-calc(100% - 90px);
+}
+
+ul.timeline.narrow > li > .timeline-badge {
+  left: 25px;
+  margin-left: 0;
+  top: 16px;
+}
+
+ul.timeline.narrow > li > .timeline-panel {
+  float: right;
+}
+
+ul.timeline.narrow > li > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+ul.timeline.narrow > li > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}

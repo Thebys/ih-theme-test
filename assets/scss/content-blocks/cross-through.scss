@@ -1,0 +1,52 @@
+/*
+  Element used for presenting prices on coworking pages.
+
+  The class .cross-through is supposed to be used on a elementor Text element. It basically inserts a horizontal line
+  placed vertically in the middle. The line will be under the content of the text element.
+
+ */
+
+.cross-through {
+  & > div {
+    text-align: center;
+    background-color: inherit;
+    position: relative;
+    z-index: 0;
+
+    &:before {
+      content: " ";
+      background-color: $border_color;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      z-index: -1;
+    }
+
+    & > div {
+      display: inline-block;
+      background-color: inherit;
+      padding: 0 30px;
+    }
+  }
+
+  h2, h3, h4, p {
+    margin: 0;
+  }
+
+  .original {
+    text-decoration: line-through;
+    display: block;
+    position: absolute;
+    top: -1.6rem;
+    opacity: 0.5;
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cross-through > div > div {
+    padding: 0 10px;
+  }
+}

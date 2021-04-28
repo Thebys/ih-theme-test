@@ -1,0 +1,131 @@
+/*
+  DEPRECATED: Old layout of the events calendar.
+  TODO: Remove.
+ */
+.toggle-square-wrapper a {
+  display:block;
+  height:100%;
+  width:100%;
+}
+
+.events-calendar > div {
+  padding: 15px;
+}
+
+.events-calendar .media:first-child {
+  margin-top: 15px;
+}
+
+.events-calendar .media-object {
+  position: relative;
+}
+
+.events-calendar .media-object img {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+
+.events-calendar .media-object::after,
+.events-calendar .media-object::after {
+  content: ' ';
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-family: "Hand Of Sean", "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 1.3em;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  text-shadow: 5px 5px 15px black;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(0,0,0,0.2);
+  pointer-events: none;
+}
+
+.events-calendar .media-object:hover::after {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.events-calendar .calendar-ws-call .media-object:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.events-calendar .cat_hub .media-object::after,
+.events-calendar .cat_hub-en .media-object::after {
+  background-image: url('/wp-content/themes/impacthub/assets/img/logo-impact-hub-square.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 30%;
+  background-color: change-color( map-get($brand_colors,"red"), $alpha: 0.5);
+  text-shadow: none;
+}
+
+.events-calendar .cat_alumni .media-object::after,
+.events-calendar .cat_alumni-en .media-object::after {
+  background-image: url('/wp-content/themes/impacthub/assets/img/logo-alumni-event.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 55%;
+  background-color: rgba(61, 164, 145, 0.5);
+  text-shadow: none;
+}
+
+.alumni-calendar .events-calendar {
+  justify-content: center;
+}
+
+.events-calendar .cat_member_free .media-object::after {
+  content: 'Pro členy zdarma';
+}
+.events-calendar .cat_member_free-en .media-object::after {
+  content: 'Free for members';
+}
+
+.events-calendar .cat_alumni .media-object::after {
+  content: 'Pro členy Alumni Club';
+}
+.events-calendar .cat_alumni-en .media-object::after {
+  content: 'Alumni Club members only';
+}
+
+.events-calendar .cat_free .media-object::after {
+  content: 'Vstupné zdarma';
+}
+.events-calendar .cat_free-en .media-object::after {
+  content: 'Free access';
+}
+
+.media.calendar-ws-call h4 {
+  color: $primary_color;
+  margin-bottom: 10px;
+}
+
+.media.calendar-ws-call .page-button-new {
+  display: block;
+}
+
+html[lang="en"] .media.calendar-ws-call h4 {
+  font-size: 17px;
+}
+
+.events-calendar .tribe_events .media-object {
+  margin-bottom: 0;
+}
+
+.events-calendar .tribe_events .location {
+  padding: 3px 10px;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+  text-align: center;
+}

@@ -1,0 +1,119 @@
+//TODO: Can be most probably completely removed as the Connect page now follows the unified coworking layout.
+
+.connect-hubert .headline {
+  padding: 5em 8em;
+  margin: 0;
+}
+
+.connect-hubert .headline p {
+  padding-bottom: 1em;
+}
+
+.connect-events .icons-6 {
+  margin: 0 auto;
+}
+
+.connect-events .toggle-square .toggle-square-text .page-button {
+  margin-top: 2rem;
+}
+
+.connect-events h4 {
+  margin-bottom: 2rem;
+}
+
+.connect-events .contained-row {
+  overflow: auto;
+}
+
+.connect-events .contained-row > div {
+  min-width: 570px;
+}
+
+@media screen and (max-width: 767px) {
+  .connect-hubert .headline {
+    padding: 1em;
+  }
+
+  .connect-events .contained-row {
+    overflow: auto;
+  }
+
+  .connect-events .contained-row > div {
+    min-width: 570px;
+  }
+
+  .connect-events .toggle-square .toggle-square-text .page-button {
+    margin-top: 0.2rem;
+  }
+
+  .connect-events h4 {
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media screen and (min-width: 992px)
+{
+  .connect.day-pass-inverted > div {
+    height: 38em;
+  }
+}
+
+@media screen and (min-width: 1200px)
+{
+  .connect.day-pass-inverted > div {
+    height: 36em;
+  }
+}
+
+/**** NEW CONNECT ****/
+.connect-numbers {
+  color: white;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+}
+
+.connect-numbers .body {
+  padding: 70px 0;
+}
+
+.connect-numbers .body h4 {
+  font-size: 2.4em;
+  padding: 0 20px;
+  color: inherit;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  text-transform: none;
+  line-height: normal;
+}
+
+.connect-numbers .number-box h3 {
+  font-weight: 100;
+}
+
+html[lang=en] .connect-numbers .body h4 {
+  font-size: 2.0em;
+}
+
+.connect-numbers .body .page-button-new {
+  margin-top: 15px;
+}
+
+.day-pass-connect .text-center {
+  padding: 6em 6em;
+}
+
+.day-pass-connect .headline {
+  margin: 0;
+}
+
+.day-pass-connect .headline strong {
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 992px)
+{
+  .connect-numbers .body h4 {
+    font-size: 2em;
+  }
+}

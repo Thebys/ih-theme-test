@@ -1,0 +1,118 @@
+/*
+  Featured events displayed above the events calendar.
+ */
+.featured-events {
+  & > div > a {
+    text-decoration: none;
+  }
+
+  & > div > div,
+  & > div > a > div {
+    position: relative;
+    z-index: 0;
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+
+    img {
+      filter: brightness(1.5);
+    }
+  }
+
+  .title {
+    font-size: 1.8em;
+    margin: 0;
+  }
+
+  .primary {
+    color: #fff;
+    padding: 60px 50px 40.21px;
+    margin-bottom: 30px;
+
+    .date {
+      font-size: 1.8em;
+      font-family: $primary_font;
+    }
+
+    .title {
+      height: 4em;
+    }
+
+    .content-override {
+      height: 12.7em;
+
+      * {
+        margin: 0;
+      }
+
+      p {
+        font-size: 1.4em;
+        line-height: 1.3;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .secondary {
+    height: 124px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+
+    .date {
+      font-family: $primary_font;
+      font-size: 2.3em;
+    }
+
+    .title {
+      font-family: $primary_font;
+      text-transform: none;
+      font-weight: normal;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .date-wrap {
+      width: 25%;
+    }
+
+    .title-wrap {
+      width: 75%;
+    }
+  }
+
+  .slideslive {
+    .title {
+      letter-spacing: 2px;
+    }
+
+    i {
+      font-size: 4em;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .featured-events > div:first-of-type {
+    padding-right: 15px;
+  }
+
+  .featured-events > div:nth-of-type(2) {
+    padding-left: 15px;
+  }
+}

@@ -1,0 +1,397 @@
+/*
+  This file sets styles for Gravity Forms
+ */
+
+//Only inside main, no effect in header/footer so it doesn't change form in footer
+main .gform_wrapper {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.gform_body {
+  float: none;
+  width: 100%;
+}
+
+.gform_footer {
+  padding:0;
+  float:none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  main .gform_wrapper {
+    width: 95%;
+  }
+}
+
+/* Form sections */
+.gsection {
+  padding-top: 30px;
+}
+
+.gsection_title,
+.gform_confirmation_message .confirmation-title {
+  font-family: $primary_font;
+  color: $text_color;
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 11.5px;
+  line-height: 1.1;
+  border-bottom: 1px solid $border_color;
+  padding-bottom: 10px;
+  font-style: normal;
+}
+
+.gsection_description {
+  text-align: center;
+}
+
+/* In form note */
+.note-up {
+  margin-top: -10px;
+}
+
+.gform_anchor {
+  position: absolute;
+  top: 0;
+}
+
+/* Form fields layout */
+.gform_body {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  ul.gform_fields {
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+
+    li.gfield {
+      margin-bottom: 20px;
+      text-align: left;
+
+      &:not([class*="col-"]) {
+        float: left;
+        width: 100%;
+      }
+
+      &[class*="col-"] {
+        padding-right: 10px;
+      }
+
+      &.col-md-12 {
+        width: 100%;
+        float: left;
+      }
+
+      &.short > div:not(.gfield_description) {
+        width: 150px;
+      }
+
+      &.gform_hidden,
+      &.gform_validation_container {
+        display: none;
+      }
+
+      .clear-multi:after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gfield.col-xs-12 {
+    float: left;
+    width: 100%;
+  }
+}
+
+/********************************* SUBMIT BUTTON *********************************/
+
+main .gform_wrapper .page-button-new {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/********************************* INPUT TYPES *********************************/
+
+.gfield {
+  input,
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    height: 41px;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: $text_color;
+    vertical-align: middle;
+    background-color: $white;
+    border: 1px solid $border_color;
+    border-radius: 5px;
+  }
+
+  textarea {
+    height: 7em;
+    resize: vertical;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    float: left;
+    margin-right: .5em;
+    width: auto;
+    height: auto;
+
+    li {
+      margin-bottom: .2em;
+    }
+  }
+
+  input[type="radio"] {
+    margin-top: 6px;
+  }
+
+  select[multiple] {
+    height: 100px;
+  }
+}
+
+/* Two column checkboxes */
+@media screen and (min-width: 768px) {
+  .two-column .gfield_checkbox li {
+    float: left;
+    width: 50%;
+  }
+}
+
+/* Time field */
+.gfield.time {
+  padding-right: 10px;
+
+  .gfield_time_hour,
+  .gfield_time_minute {
+    float: left;
+    padding-right: 5px;
+    width: 50%;
+
+    label, i {
+      display: none;
+    }
+  }
+}
+
+/********************************* LABELS & DESCRIPTIONS *********************************/
+
+.gfield_label {
+  font-weight: 600;
+  display: inline-block;
+}
+.gfield_checkbox,
+.gfield_radio {
+  position: relative;
+
+  label {
+    display: inline;
+    font-weight: normal;
+    position: relative;
+  }
+}
+
+.gfield_checkbox .gfield_label {
+  top: -2px;
+}
+
+.gfield_radio .gfield_label {
+  line-height: 1.7em;
+}
+
+.hidden-label .gfield_label {
+  display: none;
+}
+
+.gfield_description {
+  font-size: 0.9em;
+  color: $form_notes_color;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+
+/********************************* VALIDATION ERRORS *********************************/
+
+.gfield_error {
+  .gfield_label {
+    color: #434343;
+  }
+
+  .gfield_description.validation_message {
+    color: $form_error_colour;
+    font-weight: 600;
+  }
+}
+
+/* Hide general error message */
+.validation_error {
+  display: none;
+}
+
+/********************************* OPTIONAL FIELDS *********************************/
+
+//Hide all required asterisks
+.gfield_required {
+  display: none;
+}
+
+//Add optional if field is not required
+.gfield:not(.gfield_contains_required) .gfield_label:after {
+  content: " -\a0optional";
+  font-weight: normal;
+  color: $form_notes_color;
+  font-size: 0.9em;
+  padding-left: 5px;
+}
+
+html[lang="cs-CZ"] .gfield:not(.gfield_contains_required) .gfield_label:after {
+  content: " -\a0nepovinné";
+}
+
+/********************************* SELECT2.JS *********************************/
+
+.gfield .select2-container .select2-selection {
+  border-radius: 0;
+  padding: 8px 12px;
+  height: auto;
+  border: 1px solid $border_color;
+}
+
+.gfield .select2-container .select2-selection .select2-selection__rendered {
+  line-height: 1.7;
+  padding-left: 0;
+}
+
+.gfield .select2-container .select2-selection .select2-selection__arrow {
+  top: 8px;
+  right: 8px;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  overflow-y: scroll;
+}
+
+.select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 8px;
+}
+
+.select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 1px solid $white;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+/********************************* DATEPICKER *********************************/
+.ui-datepicker {
+  padding: 10px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid $border_color;
+}
+
+.ui-datepicker td,
+.ui-datepicker th {
+  padding: 4px;
+  background: map-get($brand_colors, 'light-gray');
+  border: 1px solid map-get($brand_colors, 'impact-red');
+  text-align: center;
+}
+
+.ui-datepicker-calendar {
+  margin-top: 10px;
+}
+
+.ui-datepicker-title {
+  float: left;
+  padding-right: 26px;
+}
+
+.ui-datepicker-prev span, .ui-datepicker-next span {
+  display: none;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  width: 30px;
+  height: 23px;
+  display: inline-block;
+  text-align: center;
+
+  &:before {
+    content: "<";
+    font-weight:bold;
+    font-family:$primary_font_bold;
+    font-size: 1.3em;
+    line-height: 23px;
+    width: 30px;
+    height: 23px;
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+.ui-datepicker-next:before {
+  content: ">";
+}
+
+/********************************* LOADING ANIMATION *********************************/
+
+.loading_spinner_wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+
+  .loading_spinner {
+    width: 100px;
+    height: 100px;
+    position: sticky;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    margin: 15px auto;
+  }
+
+  img {
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+
+    &:first-of-type {
+      animation:spin 1s linear infinite;
+    }
+
+    &:last-of-type {
+      padding: 25px;
+    }
+  }
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }

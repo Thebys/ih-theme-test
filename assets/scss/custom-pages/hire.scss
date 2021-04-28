@@ -1,0 +1,114 @@
+.hledame-photos > div:not(.text-block):after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(193, 39, 45, 0.4);
+  z-index: 1;
+  top: 0;
+  transition: background .3s linear;
+}
+
+.hledame-photos > div:not(.text-block):hover:after {
+  background: transparent;
+}
+
+.hledame-photos > div .value {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 15px;
+  z-index: 2;
+  color: #fff;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: 'Hand of Sean';
+  font-size: 2em;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 13px #333333;
+  opacity: 0;
+  transition: opacity .3s linear;
+}
+
+.hledame-photos > div:hover .value {
+  opacity: 1;
+}
+
+
+/* DEPRECATED: job opportunities on the Impact Hub website */
+//TODO: can be removed, we no longer present job opportunities on our website.
+.row.hire-requirements {
+  margin-left:0;
+  margin-right:0;
+  padding: 2em 0;
+}
+
+.inverted.hire-requirements a,
+.inverted.hire-requirements a:visited {
+  color: white;
+  text-decoration: underline;
+}
+
+.inverted.hire-requirements a:hover,
+.inverted.hire-requirements a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.inverted.hire-requirements h2 {
+  color: white;
+}
+
+.hire-requirements h2 {
+  text-align: left;
+  font-size: 1.6em;
+  font-weight: 400;
+  font-style: normal;
+  color: #434343;
+}
+
+.hire-ending {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 200;
+  padding: 2em 0;
+}
+
+.free-positions h2 {
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #434343;
+  font-style: normal;
+}
+
+.free-position {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid $border_color;
+}
+
+.free-position a {
+  margin-left: auto;
+}
+
+.free-position h3 {
+  font-weight: 600;
+  color: #434343;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px)
+{
+  .free-position {
+    display: block;
+    text-align: center;
+  }
+
+  .row.hire-requirements {
+    padding: 2em;
+  }
+}

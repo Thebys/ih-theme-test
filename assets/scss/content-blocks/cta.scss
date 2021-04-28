@@ -1,0 +1,135 @@
+/*
+  Various call to action elements.
+ */
+
+// Deprecated full-width column with a text on the left and button on the right.
+div.call_to_register {
+  padding: 35px 5%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  align-items: center;
+}
+
+div.call_to_register p {
+  font-size: 18px !important;
+  display: inline-block;
+  float: left;
+  padding: 0 20px 0 0;
+  font-weight: 200;
+  margin-bottom:0;
+}
+
+div.call_to_register a.page-button-new {
+  margin: 0;
+  display: inline-block;
+  padding: 8px 30px;
+  margin-left: auto;
+}
+
+div.call_to_register.multiple-actions a.page-button-new {
+  margin-right: 15px;
+  margin-left:0;
+}
+
+div.call_to_register.multiple-actions a:first-of-type {
+  margin-left: auto;
+}
+
+div.call_to_register.multiple-actions a:last-of-type {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 76px)
+{
+  div.call_to_register {
+    display: block;
+    text-align: center;
+  }
+
+  div.call_to_register p {
+    display: block;
+    float: none;
+    clear: both;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  div.call_to_register br {
+    display: none;
+  }
+
+  div.call_to_register a.page-button-new {
+    margin: 15px auto;
+  }
+}
+
+// Small text link with an arrow
+a.c2a-link {
+  text-decoration: underline;
+  font-size: 1.1em;
+  color: inherit;
+  font-family: 'GT Walsheim Regular', "Open Sans", sans-serif;
+  font-weight: 100;
+  transition: margin-left .3s linear;
+}
+
+.c2a-link:hover {
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+.c2a-link i {
+  padding-left: 5px;
+}
+
+// Call to action module which combines phone, email and form button
+.combined-c2a img {
+  height: 60px;
+  margin: 0 auto 30px auto;
+}
+
+.combined-c2a .phone,
+.combined-c2a .email {
+  padding: 30px 15px;
+
+  a {
+    font-size: 1.715em;
+    color: inherit;
+    word-break: break-all;
+  }
+
+  &.smaller {
+    p {
+      margin-bottom: 0;
+    }
+
+    a {
+      font-size: 1.4em;
+    }
+  }
+}
+
+.combined-c2a .phone {
+  border-right: 1px solid $border_color;
+}
+
+.combined-c2a .button > div {
+  height: 100%
+}
+
+@media screen and (max-width: 768px) {
+  .combined-c2a .phone {
+    border-right: none;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .combined-c2a .phone,
+  .combined-c2a .email {
+    padding: 15px;
+
+    a {
+      font-size: 1.5em;
+    }
+  }
+}

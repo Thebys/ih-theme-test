@@ -1,0 +1,16 @@
+/*
+Theme Name:         Impact Hub
+Theme URI:          https://www.impacthub.cz/
+Description:        The Impact Hub Czech website theme
+Version:            0.0.2
+Author:             Honza Kopecký, honza.kopecky@impacthub.cz
+
+Documentation:
+  - When documenting I added multiple TODOs inside of the code. They are mostly old code removals. There are also some
+    parts marked as DEPRECATED and they should be removed too. Some parts of the code can also be simplified.
+  - When removing CSS code, it is useful to search in Wordpress for the related CSS classes. It will show you which classes
+    are still used and where. If they are all in pages that are not published, the CSS can be easily removed. If not,
+    some more work is needed.
+  - When removing JS & PHP code, things are not that simple and everything needs to be tested properly.
+
+*/

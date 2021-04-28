@@ -1,0 +1,18 @@
+/*
+  Three columns layout with main perks of a service.
+  TODO: Originally used for coworking, now used on the Spaces page. Worth refactoring.
+ */
+
+.coworking-main-perks .col-xs-12 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.coworking-main-perks img {
+  margin: 0 auto;
+  height: 60px;
+}
+
+.coworking-main-perks h3 {
+  padding: 25px 0 5px;
+}

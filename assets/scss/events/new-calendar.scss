@@ -1,0 +1,122 @@
+/*
+  List of events for a month.
+
+  TODO: Worth renaming as the filename doesn't really match contents.
+ */
+
+.events-list-month {
+  border: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+
+  &.no-events p {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  .event {
+    padding: 20px 0;
+    margin: 0 60px;
+    border-top: 1px solid #e0e0e0;
+    width: calc(100% - 120px);
+
+    .date {
+      font-family: $primary_font;
+      font-size: 1.6em;
+      text-align: center;
+      padding: 25px 0;
+    }
+
+    &.multiday .date {
+      line-height: 0.9;
+      padding: 14px 0;
+    }
+
+    .details {
+      .title {
+        margin: 10px 0 15px;
+        color: $text_color;
+      }
+
+      .event-tags {
+        justify-content: left;
+
+        * {
+          height: 22px;
+          margin-right:5px;
+          cursor: default;
+        }
+
+        .tag {
+          padding-top: 6px;
+        }
+
+        &:before {
+          font-weight: 100;
+          text-transform: none;
+        }
+      }
+
+      .links {
+        padding: 18px 0;
+
+        .detail {
+          font-size: 1.15em;
+          text-transform: uppercase;
+        }
+
+        .register {
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}
+
+/****************************************** MOBILE ******************************************/
+
+@media screen and (max-width: 991px) {
+  .events-list-month.no-events p {
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .feature-top.media-object {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .featured-events .primary {
+    padding: 30px;
+  }
+
+  .events-list-month .event {
+    margin: 0 20px;
+    width: calc(100% - 40px);
+
+    .links {
+      align-items: flex-end;
+      padding: 0;
+    }
+
+    .date-mobile {
+      display: inline !important;
+    }
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .feature-top.media-object {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .events-list-month .event {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+

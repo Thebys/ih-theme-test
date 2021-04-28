@@ -1,0 +1,216 @@
+// TODO: Phone corner is not anymore used just on Arrange meeting page, move to content-blocks.
+// TODO: It would be nice to be able to use bg-* classes with phone corner.
+
+#phone-corner {
+  color: #fff;
+  width: 200px;
+  height: 200px;
+  float: right;
+  position: absolute;
+  right: 0;
+  top: -1px;
+  z-index: 3;
+  transition: all .2s linear;
+  transition-delay: .3s;
+  overflow: hidden;
+
+  &.grey:before {
+    border-color:transparent #d3d3d3 transparent transparent;
+  }
+}
+
+#phone-corner:hover,
+#phone-corner.open {
+  width: 235px;
+  height: 235px;
+  transition-delay: 0s;
+}
+
+#phone-corner::before {
+  content: "";
+  border-width: 0 100px 100px 0;
+  border-color: transparent #0f3a5f transparent transparent;
+  border-style: solid;
+  display: block;
+  position: absolute;
+  right: 0;
+  transition: all .2s linear;
+  transition-delay: .3s;
+}
+
+#phone-corner:hover::before,
+#phone-corner.open::before {
+  border-width: 0 235px 235px 0;
+  transition-delay: 0s;
+}
+
+#phone-corner::after {
+  position: absolute;
+  content:"";
+  top: -70px;
+  right: -70px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(0);
+  animation: phone-inner 3000ms infinite;
+}
+
+#phone-corner .shadow-animation {
+  display: block;
+  width: 150px;
+  height: 100px;
+  box-shadow: none;
+  animation: phone-outer 3000ms infinite;
+  transform: rotate(45deg) translate3d(60px,-103px,0);
+}
+
+#phone-corner .phone-icon {
+  position: absolute;
+  right: 0;
+  top:0;
+  font-size: 40px;
+  padding: 10px 10px;
+  text-align: right;
+  transform: rotate(180deg);
+  animation: phone-icon 3000ms infinite;
+}
+
+#phone-corner .arrow-icon {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  font-size: 18px;
+  transform: rotate(-45deg);
+  transition: all .3s linear;
+  opacity: 1;
+  transition-delay: .4s;
+  animation: phone-arrow 3000ms infinite;
+}
+
+#phone-corner:hover .arrow-icon,
+#phone-corner.open .arrow-icon {
+  top: 42px;
+  right: 42px;
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+#phone-corner p {
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  transform: rotate(45deg);
+  font-weight: bold;
+  top: 54px;
+  right: -15px;
+  width: 200px;
+  opacity: 0;
+  transition: all .2s linear;
+  transition-delay: .3s;
+}
+
+#phone-corner:hover p,
+#phone-corner.open p {
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+#phone-corner p a {
+  color: #fff;
+}
+
+#phone-corner.activated .phone-icon,
+#phone-corner.activated .arrow-icon,
+#phone-corner.activated .shadow-animation,
+#phone-corner.activated::after {
+  animation: none;
+}
+
+@keyframes phone-icon {
+  0% { transform: rotate(180deg) translate3d(0em, 0, 0); }
+  2% { transform: rotate(180deg) translate3d(0.03em, 0, 0); }
+  4% { transform: rotate(180deg) translate3d(-0.03em, 0, 0); }
+  6% { transform: rotate(180deg) translate3d(0.03em, 0, 0); }
+  8% { transform: rotate(180deg) translate3d(-0.03em, 0, 0); }
+  10% { transform: rotate(180deg) translate3d(0.03em, 0, 0); }
+  12% { transform: rotate(180deg) translate3d(-0.03em, 0, 0); }
+  14% { transform: rotate(180deg) translate3d(0.03em, 0, 0); }
+  16% { transform: rotate(180deg) translate3d(-0.03em, 0, 0); }
+  18% { transform: rotate(180deg) translate3d(0.03em, 0, 0); }
+  20% { transform: rotate(180deg) translate3d(-0.03em, 0, 0); }
+  22% { transform: rotate(180deg) translate3d(0.03em, 0, 0); }
+  24% { transform: rotate(180deg) translate3d(-0.03em, 0, 0); }
+  26% { transform: rotate(180deg) translate3d(0.03em, 0, 0); }
+  28% { transform: rotate(180deg) translate3d(-0.03em, 0, 0); }
+  30% { transform: rotate(180deg) translate3d(0.03em, 0, 0); }
+  32% { transform: rotate(180deg) translate3d(-0.03em, 0, 0); }
+  34% { transform: rotate(180deg) translate3d(0.03em, 0, 0); }
+  36% { transform: rotate(180deg) translate3d(-0.03em, 0, 0); }
+  38% { transform: rotate(180deg) translate3d(0.03em, 0, 0); }
+  40% { transform: rotate(180deg) translate3d(-0.03em, 0, 0); }
+  42% { transform: rotate(180deg) translate3d(0.03em, 0, 0); }
+  44% { transform: rotate(180deg) translate3d(-0.03em, 0, 0); }
+  46% { transform: rotate(180deg) translate3d(0em, 0, 0); }
+}
+
+@keyframes phone-inner {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(0);
+  }
+  33.3333% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+  66.6666% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0);
+  }
+}
+
+@keyframes phone-outer {
+  0% {
+    box-shadow:
+            0 0 0 0em transparent;
+  }
+  33.3333% {
+    box-shadow:
+            0 0 0 0em rgba(15, 58, 95, 0.4);
+  }
+  66.6666% {
+    box-shadow:
+            0 0 0 50px transparent;
+  }
+  100% {
+    box-shadow:
+            0 0 0 0em rgba(15, 58, 95, 0);
+  }
+}
+
+@keyframes phone-arrow {
+  0% {
+    top: 30px;
+    right: 30px;
+    opacity: 0;
+  }
+  23% {
+    opacity: 1;
+  }
+  46% {
+    top: 40px;
+    right: 40px;
+    opacity: 0;
+  }
+  100% {
+    top: 40px;
+    right: 40px;
+    opacity: 0;
+  }
+}

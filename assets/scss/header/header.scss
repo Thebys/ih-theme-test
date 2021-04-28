@@ -1,0 +1,134 @@
+/*
+  This file is included from main.scss and contains styles for header which is displayed on every page.
+ */
+
+body > header {
+  position: fixed;
+  z-index: 10;
+  background: white;
+  width: 100%;
+
+  div.shadow {
+    z-index: auto;
+  }
+}
+
+.top-menu {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 40px;
+
+  .navbar-top-black {
+    display: flex;
+    justify-content: flex-end;
+    transition: all linear .1s;
+    transition-delay: .2s;
+
+    .header-icons {
+      width: 16px;
+      margin-top: 9px;
+      margin-right: 15px;
+    }
+
+    #ls-cover {
+      width: 22px;
+      height: 22px;
+      margin-top: 7px;
+      margin-right: 20px;
+    }
+  }
+}
+
+.stickyMainMenu .top-menu .navbar-top-black {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition-delay: 0s;
+}
+
+.main-menu {
+  width:100%;
+  background: $white;
+  box-shadow: 0 0 15px 2px rgb(48, 48, 48);
+  -webkit-box-shadow: 0 0 15px 2px rgb(48, 48, 48);
+  -moz-box-shadow: 0 0 15px 2px rgb(48, 48, 48);
+
+  & > .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .brand {
+    margin-right: auto;
+
+    img {
+      position: relative;
+      z-index: 2;
+      width: auto;
+      height: $logo_height;
+      transition: all linear .3s;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+  }
+}
+
+.stickyMainMenu .main-menu .brand img {
+  height: $logo_height_sticky;
+}
+
+/*IE10+ support, because of bug in justify-content: center*/
+_:-ms-input-placeholder, :root #mainHeader .main-menu > .container {
+  justify-content: flex-start;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #mainHeader .main-menu > .container {
+    justify-content: flex-start;
+  }
+}
+
+// Header menu on desktop.
+@import "menu";
+// Header menu on mobile.
+@import "menu-mobile";
+// DEPRECATED: Modal window with options to login to K10/D10 Hubert.
+@import "hubert-modal";
+// DEPRECATED: Search icon & form in the header.
+@import "search";
+
+/****************************************** EVENTS MENU FIX ******************************************/
+/* Stories page was highlighted when event detail viewed.
+This disables the highlight and highlights calendar page instead. */
+
+.single-tribe_events #menu-main-menu li.menu-pribehy.active > a {
+  border-bottom: none;
+}
+
+.single-tribe_events #menu-main-menu li.menu-akce > a,
+.single-tribe_events #menu-main-menu li.menu-kalendar > a {
+  border-bottom: 2px solid $primary_color;
+}
+
+/* Highlight rental and catering items in menu when a k10/d10 catering page is displayed. */
+body.obcerstveni #menu-main-menu li.menu-pronajem > a,
+body.obcerstveni #menu-main-menu li.menu-obcerstveni > a,
+body.catering #menu-main-menu-ang li.menu-rental > a,
+body.catering #menu-main-menu-ang li.menu-catering > a {
+  border-bottom: 2px solid $primary_color;
+}
+
+/* Highlight rental and pricelist items in menu when a k10/d10 pricelist page is displayed. */
+body.cenik-pronajmu #menu-main-menu li.menu-pronajem > a,
+body.cenik-pronajmu #menu-main-menu li.menu-cenik > a,
+body.pricelist #menu-main-menu-ang li.menu-rental > a,
+body.pricelist #menu-main-menu-ang li.menu-pricelist > a {
+  border-bottom: 2px solid $primary_color;
+}

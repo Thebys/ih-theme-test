@@ -1,0 +1,105 @@
+.contact-location {
+  position: relative;
+}
+
+.contact-location-detail {
+  padding: 50px;
+}
+
+.contact-location-detail p {
+  width: 88%;
+  margin-bottom: 0;
+}
+
+.contact-location-detail h2 {
+  margin-top: 0;
+}
+
+.contact-location-detail dl {
+  margin: 0;
+  padding-top: 30px;
+}
+
+.contact-location-detail dl a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.contact-location-detail dl a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-location-detail dt {
+  font-size: 0;
+  float: left;
+  clear: left;
+  padding: 0 20px 20px 0;
+  width: 55px;
+  text-align: center;
+}
+
+.contact-location-detail dt i {
+  font-size: 2.5rem;
+}
+
+.contact-location-detail dd {
+  line-height: 2.5rem;
+  float: left;
+}
+
+.contact-location .location-badge-link {
+  content: '';
+  position: absolute;
+  display: block;
+  font-size: 0;
+  top: 38px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  transform: translateX(-50%);
+  transition: all .15s linear;
+  z-index: 3;
+}
+
+.contact-location .location-badge-link:hover {
+  transform: scale(1.1) translateX(-50%);
+}
+
+.contact-location.d10 .location-badge-link {
+  background-image: url('/wp-content/themes/impacthub/assets/img/locations/d10-loc-badge.png');
+}
+
+.contact-location.k10 .location-badge-link {
+  background-image: url('/wp-content/themes/impacthub/assets/img/locations/k10-loc-badge.png');
+}
+
+/* Google map info window headline */
+.gm-style-iw h3 {
+  color: #434343;
+  font-family: 'GT Walsheim Regular';
+}
+
+.contact-cities {
+  text-align: center;
+  margin: 2.5em 0;
+}
+
+.contact-cities .page-button-new {
+  margin: 1em .8em 0;
+}
+
+@media screen and (max-width: 767px) {
+  .contact-location .location-badge-link {
+    display: none;
+  }
+
+  .contact-location > .col-xs-12.slider {
+    order: 2;
+  }
+
+  .contact-location > .col-xs-12:not(.slider) {
+    order: 1;
+  }
+}

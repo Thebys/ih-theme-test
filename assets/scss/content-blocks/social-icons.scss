@@ -1,0 +1,72 @@
+/*
+  DEPRECATED: Floating social links element on homepage.
+
+  TODO: Not used anymore. Just remove.
+ */
+.social-links {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  width: 60px;
+  height: 100%;
+  margin-top: -150px;
+  z-index: 10;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    @include clearfix;
+
+    li {
+      display: inline-block;
+      float: left;
+      clear: left;
+    }
+  }
+
+  a {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    @include no-hover-underline;
+    text-align: center;
+    line-height: 60px;
+    font-size: 2.5em;
+    background: #fff;
+    color: inherit;
+
+    &:hover, &:focus {
+      background: none;
+      color: #fff;
+    }
+  }
+
+  span {
+    display: none;
+  }
+}
+
+.social-share {
+  color: $primary_color;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-share .caption {
+  border-bottom: 2px solid;
+  font-size: large;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.social-share .icons {
+  font-size: x-large;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.social-share .icons a, .social-share .icons a:hover, .social-share .icons a:visited{
+  text-decoration: none;
+  margin: 12px;
+}

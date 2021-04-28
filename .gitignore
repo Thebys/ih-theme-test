@@ -1,0 +1,7 @@
+#Ignore node.js files
+/assets/node_modules/
+/assets/package-lock.json
+#Ignore everything in the log folder
+/log/*
+#But keep the log folder so files can be created inside
+!/log/.gitkeep

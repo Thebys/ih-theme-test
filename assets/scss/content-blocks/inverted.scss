@@ -1,0 +1,39 @@
+/*
+  DEPRECATED: Accented section with red background.
+
+  TODO: Not really used anymore.
+
+ */
+
+.inverted {
+  background-color: map-get($brand_colors, 'red');
+  color:  #fff;
+}
+
+.inverted h1,
+.inverted h2,
+.inverted h3,
+.inverted h4 {
+  color: #fff;
+}
+
+.inverted a:not(.page-button-new) {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.inverted-section {
+  background-color: map-get($brand_colors, 'red');
+  color: #fff;
+  text-align: center;
+}
+
+.inverted-section h1,
+.inverted-section h2,
+.inverted-section h3 {
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: normal;
+}

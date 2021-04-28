@@ -1,0 +1,109 @@
+/*
+  This file defines custom fonts and sets default fonts for elements.
+ */
+
+@font-face {
+  font-family: 'GT Walsheim Regular';
+  src:  url('../fonts/GT-Walsheim-Regular.eot?ujgb11');
+  src:  url('../fonts/GT-Walsheim-Regular.eot?ujgb11#iefix') format('embedded-opentype'),
+  url('../fonts/GT-Walsheim-Regular.ttf?ujgb11') format('truetype'),
+  url('../fonts/GT-Walsheim-Regular.woff?ujgb11') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Walsheim Bold';
+  src:  url('../fonts/GT-Walsheim-Bold.eot?ujgb11');
+  src:  url('../fonts/GT-Walsheim-Bold.eot?ujgb11#iefix') format('embedded-opentype'),
+  url('../fonts/GT-Walsheim-Bold.ttf?ujgb11') format('truetype'),
+  url('../fonts/GT-Walsheim-Bold.woff?ujgb11') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hand of Sean';
+  src: url('../fonts/handofsean-webfont.eot');
+  src: url('../fonts/handofsean-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/handofsean-webfont.woff2') format('woff2'),
+  url('../fonts/handofsean-webfont.woff') format('woff'),
+  url('../fonts/handofsean-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin regular-text {
+  font-family: $secondary_font;
+  font-size: 1.4rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.643;
+  color: $text_color;
+  text-transform: none;
+}
+
+@mixin page-headline {
+  font-family: $primary_font;
+  font-size: 3.5rem;
+  font-weight: normal;
+  line-height: 1.286;
+  text-transform: none;
+}
+
+@mixin subheadline {
+  font-family: $secondary_font;
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1.643;
+  text-transform: uppercase;
+}
+
+@mixin text-smaller {
+  font-size: 1.1rem;
+}
+
+@mixin text-larger {
+  font-size: 1.8rem;
+  line-height: 1.445;
+}
+
+body {
+  @include regular-text;
+
+  h1, h2, h3, h4, h5,
+  .subheadline {
+    @include subheadline;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
+
+.wrapper
+
+.main-headline {
+  @include page-headline;
+}
+
+.text-smaller {
+  @include text-smaller;
+}
+
+.text-larger {
+  @include text-larger;
+}
+
+dt, dd {
+  line-height: 1.7;
+}

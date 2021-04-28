@@ -1,0 +1,196 @@
+// Spaces
+.hp-space-detail {
+  height: 100%;
+  padding: 70px 40px;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.hp-space-detail.d10 {
+  border-color: $d10_primary_color;
+}
+
+.hp-space-detail.k10 {
+  border-color: $k10_primary_color;
+}
+
+.hp-space-detail img {
+  max-height: 180px;
+}
+
+// Stories stream
+
+.homepage-news .post {
+  margin: 0;
+  padding: 20px;
+}
+
+.homepage-news .post .post-type {
+  display: block;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  background: rgba(67,67,67,0.7);
+  width: 100%;
+  color: #fff;
+}
+
+.homepage-news .post .post-type i {
+  padding-top: 4px;
+}
+
+.homepage-news .post .media-object {
+  position: relative;
+}
+
+.homepage-news .post .media-heading a {
+  color: #434343;
+}
+
+// Homepage map
+
+#global-locations-map {
+  height: 70vh;
+}
+
+.google-map-headline {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background: rgba(67,67,67,0.7);
+}
+
+.google-map-headline .page-headline {
+  padding: 30px 0;
+}
+
+.opz-publicity img {
+  max-height: 80px;
+  max-width: 100%;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1199px) {
+  .hp-space-detail {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hp-space-detail .page-button-new {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .google-map-headline .contained-row,
+  .opz-publicity .contained-row {
+    width: 90%;
+  }
+
+  .opz-publicity img {
+    margin: 20px 0;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .hp-space-detail img {
+    margin-bottom: 30px;
+  }
+
+  #global-locations-map {
+    height: 90vh;
+  }
+}
+
+// Homepage form
+// TODO: Can be removed, we no longer have a form on homepage
+.hp-form-wrapper {
+  text-align: center;
+  padding: 0 30px;
+}
+
+.hp-form-wrapper div.widget.gform_widget {
+  width: 100% !important;
+  float: none !important;
+}
+
+.hp-form-wrapper h2,
+.hp-form-wrapper p,
+.hp-form-wrapper .gform_confirmation_message {
+  color: white;
+  text-align: center;
+  font-style: normal;
+}
+
+.hp-form-wrapper a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.hp-form-wrapper a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hp-form-wrapper h2 {
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.hp-form-wrapper .gfield {
+  display: inline-block;
+  margin: 0 5px 10px 0;
+}
+
+.hp-form-wrapper .gfield input,
+.hp-form-wrapper .gfield select {
+  max-width: 150px;
+  transition: all .3s linear;
+}
+
+.hp-form-wrapper .gform_footer,
+.hp-form-wrapper .gform_body {
+  display: inline-block !important;
+  float: none !important;
+  width: auto !important;
+}
+
+.hp-form-wrapper .gform_body .gform_fields {
+  margin: 0;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px)
+{
+  .hp-form-wrapper .gform_body .gform_fields {
+    justify-content: space-around;
+  }
+
+  .hp-form-wrapper .gfield input,
+  .hp-form-wrapper .gfield select {
+    max-width: 100%;
+  }
+
+  .hp-form-wrapper .gfield {
+    width: 100%;
+  }
+}
+
+/********************* PAGE BUTTON NEW STYLE ****************************/
+
+.hp-form-wrapper .gform_footer input[type="submit"],
+.hp-form-wrapper .gform_footer input[type="submit"]:focus,
+.hp-form-wrapper .gform_footer input[type="submit"]:active {
+  border-color: #fff;
+}

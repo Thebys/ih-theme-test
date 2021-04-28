@@ -1,0 +1,112 @@
+//TODO: Can be probably removed as we no longer present K10 and D10 tariffs on a single page.
+
+.onoffswitch-coworking {
+  margin: 0 auto;
+  width: 50%;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select: none;
+}
+
+.onoffswitch-coworking-checkbox {
+  display: none;
+}
+
+.onoffswitch-coworking-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid $d10_primary_color;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.onoffswitch-coworking-inner {
+  display: block;
+  width: 100%;
+
+  &:before,
+  &:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+
+  &:after {
+    content: "Impact Hub Praha K10";
+    background-color: $white;
+    color: $text_color;
+  }
+
+  &.en:after {
+    content: "Impact Hub Prague K10";
+  }
+
+  &:before {
+    content: "Impact Hub Praha D10";
+    background-color: $d10_primary_color;
+    color: $white;
+  }
+
+  &.en:before {
+    content: "Impact Hub Prague D10";
+  }
+}
+
+.onoffswitch-coworking-checkbox:checked + .onoffswitch-coworking-label {
+  border: 2px solid $k10_primary_color;
+
+  .onoffswitch-coworking-inner {
+    &:after {
+      background-color: $k10_primary_color;
+      color: $white;
+    }
+
+    &:before {
+      background-color: $white;
+      color: $text_color;
+    }
+  }
+}
+
+// maps in modal windows for Day Pass
+#modal-visit-k10 #k10-location-map,
+#modal-visit-d10 #d10-location-map,
+#modal-visit-brno #brno-location-map,
+#modal-visit-ostrava #ostrava-location-map {
+  height: 100vw;
+  max-height: 300px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 991px) {
+  .onoffswitch-coworking {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .onoffswitch-coworking {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .onoffswitch-coworking-inner {
+    &:before, &:after {
+      font-size: 12px;
+    }
+  }
+}

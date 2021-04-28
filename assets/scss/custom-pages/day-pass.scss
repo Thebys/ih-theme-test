@@ -1,0 +1,38 @@
+//TODO: Can be most probably removed, Day Pass follows unified coworking structure.
+.contact-location.day-pass p {
+  width: 100%;
+}
+
+.contact-location.day-pass ul {
+  list-style-type: none;
+}
+
+.contact-location.day-pass ul li:before {
+  content: "\e62a";
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: -2em;
+  display: inline-block;
+  width: 2em;
+}
+
+.contact-location.day-pass .swiper-container,
+.contact-location.day-pass .swiper-wrapper,
+.contact-location.day-pass .swiper-slide,
+.contact-location.day-pass .swiper-slide img  {
+  height: 100%;
+  width: auto;
+}
+
+.contact-location.day-pass a.page-button-new + span {
+  display: inline-block;
+  padding: 5px 0 0 15px;
+}

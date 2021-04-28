@@ -1,0 +1,27 @@
+/*
+  Modal video that can open from the section with featured events.
+ */
+
+#modal-calendar-video {
+  .modal-content {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .modal-body {
+    iframe {
+      display: block;
+      width: 100%;
+      max-height: 70vh;
+    }
+
+    /* Only youtube embeding */
+    iframe[src*="youtu"] {
+      height: 50vw;
+    }
+
+    /* Only facebook embeding */
+    iframe[src*="facebook"] {
+      height: 550px;
+    }
+  }
+}

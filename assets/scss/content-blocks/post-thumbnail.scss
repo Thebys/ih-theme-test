@@ -1,0 +1,38 @@
+.post-thumbnail {
+  padding: 15px;
+  margin-top: 0;
+  text-align: center;
+
+  .inner {
+    height: 100%;
+    padding: 25px;
+    background-color: $background_gray_color;
+  }
+
+  img, .inner {
+    border-radius: 15px;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    color: $text_color;
+    transition: transform .3s ease-out;
+
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.03);
+
+      h3 {
+        text-decoration: underline;
+      }
+    }
+
+    h3 {
+      font-size: 1.2em;
+      font-weight: 600;
+      line-height: 1.3em;
+      min-height: 4em;
+    }
+  }
+}

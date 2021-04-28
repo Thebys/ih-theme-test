@@ -1,0 +1,44 @@
+.referential-badges {
+    .flex-container {
+        width: 50%;
+        margin: 0 auto;   
+        display: flex;
+        padding-bottom: 40px;
+
+        &#title {
+            padding-bottom: 20px;
+        }
+        
+        .column-right {
+            padding-left: 45px;
+            flex: 1;
+            font-size: 12px;
+            min-height: 80px;
+            display: inline-flex;
+            flex-direction: column;  
+            justify-content: center;
+        }
+
+        .column-left {
+            width: 80px;
+        }
+
+        .referential-badges-title {
+            font-weight: 700;
+        }
+    }
+
+    img {
+        border-radius: 50%;
+    }
+    
+    @media screen and (max-width: 767px) {
+        .flex-container {
+            width: 95%; 
+            
+            .column-right {
+                padding-left: 20px;
+            }
+        }
+    }
+}

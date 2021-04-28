@@ -1,0 +1,146 @@
+/*
+  Header menu on desktop.
+ */
+
+.main-menu .navigation {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    display: inline-block;
+    overflow-y: hidden;
+    align-self: flex-end;
+
+    li {
+      display: inline-block;
+      position: static;
+      line-height: 0;
+
+      &:hover {
+        color: #812926;
+        text-decoration: none;
+      }
+
+      &:hover,
+      &.active,
+      &.open {
+        & > a {
+          border-bottom: 2px solid #812926;
+        }
+      }
+
+      a {
+        color: #404040;
+        font-weight: 700;
+        font-size:1.25rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-rendering:optimizeLegibility;
+        display: block;
+        border-bottom: 2px solid transparent;
+        overflow: hidden;
+        padding: 20px 10px;
+        position: relative;
+        z-index: 100000;
+        line-height: normal;
+        -moz-transition: all .3s linear;
+        -webkit-transition: all .3s linear;
+        -o-transition: all .3s linear;
+        -ms-transition: all .3s linear;
+        transition: all .3s linear;
+
+        //Ripple effect on click
+        span {
+          position: absolute;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.3);
+          z-index: 1001;
+          width: 100px;
+          height: 100px;
+          margin-top: -50px;
+          margin-left: -50px;
+          animation: ripple 1s;
+          opacity: 0;
+        }
+
+        .caret {
+          border-top: 4px solid $text_color;
+        }
+      }
+
+      .dropdown-backdrop {
+        display: none;
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top:100%;
+        left: unset;
+        display: block;
+        float: none;
+        font-size: inherit;
+        border-radius: 0;
+        visibility: hidden;
+        opacity:0;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        width: auto;
+        min-width: 1px;
+        box-shadow: 0 15px 15px -6px rgb(48, 48, 48);
+        -moz-transition: all .3s linear;
+        -webkit-transition: all .3s linear;
+        -o-transition: all .3s linear;
+        -ms-transition: all .3s linear;
+        transition: all .3s linear;
+        z-index: 99999;
+        border: 1px solid lightgrey;
+
+        ul {
+          width: auto;
+        }
+
+        li {
+          width: 100%;
+          white-space: nowrap;
+          display: block;
+
+          a {
+            padding: 12px 10px;
+            width: 100%;
+          }
+        }
+      }
+
+      &:hover > .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(10);
+  }
+}
+
+// STICKY DESKTOP MENU
+
+main {
+  padding-top: $logo_height;
+  transition: all linear .3s;
+  background-position: center $logo_height;
+}
+
+.stickyMainMenu main {
+  padding-top: $logo_height_sticky;
+  background-position: center $logo_height_sticky;
+}

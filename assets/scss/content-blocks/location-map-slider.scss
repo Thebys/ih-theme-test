@@ -1,0 +1,148 @@
+/*
+  Element that puts Google Map and a slider/additional content side-by-side.
+ */
+
+#k10-location-map,
+#d10-location-map,
+.location-map {
+  height: 100%;
+}
+
+.tour-open {
+  position: absolute;
+  bottom: 15px;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#virtual-tour iframe {
+  height: 80vh;
+  width: 100%;
+  display: block;
+}
+
+.lightbox {
+  .lb-data .lb-close,
+  .lb-data,
+  .lb-number {
+    color: $location_primary_color;
+  }
+
+  .lb-data .lb-close {
+    background: none;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.8em;
+    text-decoration: none;
+  }
+
+  .lb-close:before {
+    content: "\e615";
+  }
+
+  .lb-nav a {
+    background: none !important;
+
+    &:before {
+      content: '→';
+      display: block;
+      padding: 25px 15px 23px 15px;
+      font-family: $primary_font !important;
+      font-size: 2.5em;
+      color: #434343;
+      background-color: $location_primary_color;
+      font-weight: bold;
+      background: #fff;
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%);
+      text-decoration: none;
+    }
+
+    &.lb-prev:before {
+      content: '←';
+    }
+
+    &.next:before {
+      content: '→';
+      right: 0;
+    }
+  }
+
+  .lb-outerContainer {
+    background: $location_primary_color;
+  }
+
+  .lb-image {
+    border-color: $location_primary_color;
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #k10-location-map,
+  #d10-location-map,
+  .location-map {
+    height: 50vh;
+  }
+
+  #virtual-tour.open {
+    height: 50vh;
+  }
+}
+
+/* LOCATION SPECIFICS */
+
+body.k10 {
+  .lightbox {
+    .lb-outerContainer {
+      background: $k10_primary_color;
+    }
+
+    .lb-image {
+      border-color: $k10_primary_color;
+    }
+
+    .lb-data .lb-close,
+    .lb-data,
+    .lb-number {
+      color: $k10_primary_color;
+    }
+
+    .lb-nav a:before {
+      background-color: $k10_primary_color;
+      color: #fff;
+    }
+  }
+}
+
+body.d10 {
+  .lightbox {
+    .lb-outerContainer {
+      background: $d10_primary_color;
+    }
+
+    .lb-image {
+      border-color: $d10_primary_color;
+    }
+
+    .lb-data .lb-close,
+    .lb-data,
+    .lb-number {
+      color: $d10_primary_color;
+    }
+
+    .lb-nav a:before {
+      background-color: $d10_primary_color;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+/*
+  Table element to present multiple prices for a service.
+
+  Connected to custom Pricing Table Elementor widget.
+ */
+
+.pricing-table {
+
+  .inner {
+    overflow: hidden;
+  }
+
+  .head {
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    text-align: left;
+    padding: 30px;
+    min-height: 215px;
+    color: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 0;
+
+    &.shadow {
+      text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.51);
+      box-shadow: none;
+    }
+
+    &.hover-effect,
+    &.hover-effect * {
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      transition: all .3s linear;
+    }
+
+    &.hover-effect:hover {
+      background-blend-mode: normal;
+
+      * {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.7;
+      z-index: -1;
+    }
+
+    .name {
+      padding: 0 0 5px;
+      margin: 0;
+    }
+
+    .top-note {
+      font-size: 1em;
+      font-family: $primary_font;
+      text-transform: uppercase;
+      line-height: normal;
+    }
+
+    .bottom-note {
+      text-transform: none;
+      font-size: 1em;
+      line-height: normal;
+      font-weight: 700;
+      justify-self: flex-end;
+      margin-top: auto;
+    }
+  }
+
+  .price {
+    padding: 20px 0;
+    border-bottom: 1px solid $border_color;
+    font-family: $secondary_font;
+
+    &:nth-of-type(2n) {
+      background: #fff;
+    }
+
+    &:nth-of-type(2n + 1) {
+      background: map-get($brand_colors, "light-gray");
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    span {
+      display: block;
+    }
+
+    .price-title {
+      padding-bottom: 5px;
+      @include subheadline;
+    }
+
+    .price-subtitle {
+      padding-bottom: 10px;
+      display: inline-block;
+      max-width: 80%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .pricing-table .head .price .price-subtitle {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (max-width: 991px) {
+}

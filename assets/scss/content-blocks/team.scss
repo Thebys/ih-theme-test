@@ -1,0 +1,58 @@
+/*
+  Team member profile on team page.
+
+  TODO: Page specific, move.
+ */
+
+.team-member {
+  padding: 10px 0;
+}
+
+.team-member .inner {
+  margin: 1rem;
+  border: 1px solid $border_color;
+  height: 100%;
+  position: relative;
+}
+
+.team-member .member-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member .member-image .image-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  visibility: visible;
+  background-color: rgba(0,0,0,0.45);
+  -webkit-transition: background-color .3s linear;
+  -moz-transition: background-color .3s linear;
+  transition: background-color .3s linear;
+}
+
+.team-member:hover .member-image .image-overlay {
+  background-color: transparent;
+}
+
+.team-member .member-image img {
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  -webkit-backface-visibility: hidden;
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+  transform: translateZ(0);
+}
+
+.team-member:hover .member-image img {
+  -ms-transform: translateZ(0) scale(1.1); /* IE 9 */
+  -webkit-transform: translateZ(0) scale(1.1); /* Chrome, Safari, Opera */
+  transform: translateZ(0) scale(1.1);
+}
+
+.team-member .member-content {
+  padding: 1rem;
+}

@@ -1,0 +1,157 @@
+/*
+  Page intro with headline, intro text, icons and action button.
+ */
+
+.page-intro {
+  font-weight: normal;
+  position: relative;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 250px;
+
+  & > * {
+    position: relative;
+    color: white;
+  }
+  
+  p {
+    @include text-larger;
+    font-family: $primary_font;
+  }
+
+  span.tag {
+    font-size: 1em;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-family: $primary_font;
+    text-transform: none;
+    font-weight: normal;
+    margin-bottom: 30px;
+    color: $white;
+  }
+
+  .page-headline {
+    padding: 50px 0;
+  }
+
+  .highlight-numbers {
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+
+    & > div {
+      padding: 15px 30px;
+    }
+
+    span {
+      font-family: $primary_font;
+      font-size: 1.5em;
+      display: block;
+      padding-bottom: 7px;
+    }
+  }
+
+  p {
+    font-family: $primary_font;
+    font-size: 1.3em;
+  }
+
+  .page-button-new {
+    margin-top: 30px;
+  }
+
+  .icons {
+    -moz-justify-content: space-evenly;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+
+    .text-icon {
+      color: $white;
+      padding-left: 1em;
+      padding-right: 1em;
+
+      a {
+        transition: transform .3s linear;
+
+        &:active, &:hover, &:focus {
+          color: inherit;
+          -webkit-transform: scale(1.05);
+          -moz-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+      }
+
+      i {
+        font-size: 4.5rem;
+      }
+    }
+  }
+
+}
+
+.page-intro-bglayer.bg-light-grey + div p,
+.page-intro-bglayer.bg-white + div p,
+.page-intro-bglayer.bg-yellow + div p,
+.page-intro-bglayer.bg-light-grey + div + div .text-icon,
+.page-intro-bglayer.bg-white + div + div .text-icon,
+.page-intro-bglayer.bg-yellow + div + div .text-icon,
+.page-intro-bglayer.bg-light-grey + div + div p,
+.page-intro-bglayer.bg-white + div + div p,
+.page-intro-bglayer.bg-yellow + div + div p,
+.page-intro-bglayer.bg-yellow + div + div p,
+.page-intro-bglayer.bg-light-grey + div h1,
+.page-intro-bglayer.bg-white + div h1,
+.page-intro-bglayer.bg-yellow + div h1{
+  color: $text_color;
+}
+
+.page-intro-bglayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+#intro-color-switch {
+  font-family: $primary_font;
+  position: fixed;
+  padding: 10px;
+  background: $white;
+  left: 0;
+  top: 50%;
+}
+
+#intro-color-switch p {
+  font-size: 1.5rem;
+  color: $primary_color;
+}
+
+#intro-color-switch select {
+  padding: 3px 5px;
+  color: $text_color;
+}
+
+.page main,
+.blog main {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .page-intro-bglayer {
+    opacity: 1;
+  }
+
+  .page main,
+  .blog main {
+    background-attachment: unset;
+    background-repeat: no-repeat;
+    background-size: auto 250px;
+  }
+}
+

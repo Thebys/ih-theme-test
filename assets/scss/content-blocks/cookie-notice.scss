@@ -1,0 +1,14 @@
+/*
+  Cookie prompt.
+ */
+
+#cookie-notice #cn-accept-cookie {
+  background: $primary_color;
+  font-family: $secondary_font;
+  font-weight: 700;
+  border-radius: 3px;
+  border: 0;
+  box-shadow: none;
+  padding: 3px 20px;
+  text-transform: uppercase;
+}

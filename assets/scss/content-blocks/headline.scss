@@ -1,0 +1,78 @@
+/*
+  Headline element used on most pages.
+
+  Connected with the custom Section Headline Elementor module.
+ */
+
+.page-headline {
+  text-align: center
+}
+
+// Fix for hardcoded elements
+.elementor-widget-html .page-headline {
+  padding: 50px 0;
+}
+
+.page-headline h1,
+.page-headline h2,
+.page-headline h3,
+.page-headline h4 {
+  @include page-headline;
+}
+
+.blog-1 .page-headline p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 991px) {
+  .blog-1 .page-headline {
+    p,
+    h1, h2, h3, h4 {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.headline {
+  margin-top: 4em;
+  text-align: center;
+}
+
+.headline b a:not(.page-button-new),
+.headline strong a:not(.page-button-new) {
+  font-weight: inherit;
+}
+
+.headline a:not(.page-button-new) {
+  font-weight: normal;
+}
+
+.headline.no-top {
+  margin-top:0;
+}
+
+.inverted .headline h1,
+.inverted .headline h2 {
+  color: white;
+}
+.inverted .contained-row> div.headline >p {
+  color: white;
+}
+
+.contained-row > div.headline > p {
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  font-weight: 200;
+}
+
+/* ============================ MOBILE ============================================= */
+
+@media (max-width: 774px) {
+  .headline {
+    padding: 0 2em;
+  }
+}

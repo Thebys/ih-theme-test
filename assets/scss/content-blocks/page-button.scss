@@ -1,0 +1,197 @@
+/*
+  Main action button with multiple style options.
+ */
+
+.page-button-new,
+.page-button-new:focus,
+.page-button-new:active {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: $primary_color;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.page-button-new:hover{
+  background-color: $white;
+  color: $primary_color;
+  text-decoration: none;
+  border: 1px solid $primary_color;
+  cursor: pointer;
+}
+
+.page-button-new.centered {
+  display: table;
+  margin: 0 auto;
+}
+
+.page-button-new.full-width {
+  display: block;
+}
+
+// Brand color buttons
+@each $name, $color in $brand_colors {
+  .page-button-new.bg-#{$name} {
+    background-color: $color;
+  }
+
+  .page-button-new.bg-#{$name}:not(.transparent):not(.light):hover {
+    background-color: transparent !important;
+    color: $color;
+    border-color: $color;
+  }
+
+  .page-button-new.c-#{$name} {
+    color: $color;
+  }
+
+  .page-button-new.light.c-#{$name} {
+    border-color: $color;
+  }
+
+  .page-button-new.light.c-#{$name}:hover {
+    background-color: $color;
+  }
+
+  .page-button-new.transparent.c-#{$name} {
+    border-color: $color;
+  }
+
+  .page-button-new.transparent-colored.c-#{$name}:hover {
+    background-color: $color;
+    color: #fff !important;
+  }
+
+  .page-button-new.transparent-colored.c-#{$name} {
+    background: transparent;
+    border-color: $color;
+  }
+}
+
+.page-button-new.bg-*:hover {
+  background-color: transparent;
+  color: $white;
+  border-color: $white;
+}
+
+// Transparent button (white on hover)
+.page-button-new.transparent {
+  background: transparent;
+  border-color: $white;
+}
+
+.page-button-new.transparent:hover{
+  background: $white;
+}
+
+// White bg button (transparent on hover)
+.page-button-new.white {
+  background-color: $white;
+  color: $primary_color;
+  border-color:  $white;
+}
+
+.page-button-new.white:hover {
+  background: transparent;
+  color: $white;
+}
+
+// White bg button with border (colored on hover)
+.page-button-new.light {
+  color: $primary_color;
+  background: $white;
+  border-color: $primary_color;
+}
+
+.page-button-new.light:hover {
+  background: $primary_color;
+  color: $white !important;
+}
+
+
+// Buttons of different sizes
+.page-button-new.small {
+  width: auto;
+  padding: 5px 15px;
+}
+
+.page-button-new.narrow {
+  padding: 8px 15px;
+}
+
+// Old buttons
+.page-button {
+  vertical-align: middle;
+  background: $primary_color;
+  min-height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+  font-family: 'GT Walsheim Bold', 'Open Sans', sans-serif;
+  color: white;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 1em 0;
+  box-sizing: content-box;
+}
+
+.page-button.button-lead {
+  height: 3.5em;
+  line-height: 3.5em;
+}
+
+.page-button.button-lead a {
+  padding:0 3.5em;
+}
+
+.center-button {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.page-button a {
+  color: #fff;
+  padding: 0 0.4em;
+  display: block;
+  text-decoration: none;
+}
+
+.page-button span {
+  display: table-cell;
+  padding: 0 1em;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.toggle-square .toggle-square-text .page-button {
+  vertical-align: middle;
+  min-height: 2em;
+  line-height: 2em;
+  background: rgba(129, 42, 39, 0);
+  color: white;
+  display: inline-block;
+  margin: 0.5em 0;
+  border: 1px solid white;
+  box-sizing: content-box;
+}
+
+.page-button  span.action {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 2em;
+  border-right: 1px solid white;
+  height: 100%;
+  width: 26px;
+  padding: 0 0.2em
+}
+

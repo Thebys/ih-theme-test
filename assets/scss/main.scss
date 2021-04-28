@@ -1,0 +1,42 @@
+/*
+  This is the main SCSS file which includes all styles needed for the website.
+ */
+
+// Swiper library used for sliders
+@import "~swiper/css/swiper.min.css";
+// Lightbox library used for photo overlays
+@import "~lightbox2/dist/css/lightbox.min.css";
+// Select2 library used to replace default select element with an advanced one
+@import "~select2/dist/css/select2.min.css";
+
+// Defines various variables used throughout the code. Mostly color codes.
+@import "variables";
+// Mostly deprecated mixins that could be remover once "Banners" functionality is gone.
+@import "utilities";
+// Defines custom fonts and sets default fonts for various elements.
+@import "font";
+// Defines Icomoon icon font. This could be removed soon as we are not really using the Icomoon icons
+// anymore. They are still used on some pages where they could be either replaced with SVGs or
+// replaced with new icons.
+@import "icomoon-icons";
+// Defines many CSS classes that are later used throughout the code.
+@import "helpers";
+
+// Gravity forms throughout the website.
+@import "forms";
+
+// Key blocks of the website.
+@import "header/header";
+@import "footer";
+@import "layout";
+
+// Events & Stories sections of the website.
+@import "events/events";
+@import "stories/stories";
+
+// Various page building blocks that are usually shared by multiple pages.
+@import "content-blocks/content-blocks";
+
+// Specific pages style that usually apply only for a single page.
+// Currently, there might be an overlap with content-block, try to keep them separated for the future.
+@import "custom-pages/custom-pages";

@@ -1,0 +1,143 @@
+$footer_border: 1px solid rgba(255, 255, 255, 0.3);
+
+footer#footer {
+  background-image: url("/wp-content/themes/impacthub/assets/img/footer-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 65px 0;
+
+  .container {
+    padding: 0 30px;
+  }
+
+  * {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  a:not(.page-button-new) {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  #footer-logo {
+    padding-bottom: 50px;
+
+    img {
+      height: 70px;
+    }
+  }
+
+  #footer-top {
+    padding-bottom: 50px;
+  }
+
+  #footer-left {
+    border-right: $footer_border;
+    padding-right: 4%;
+  }
+
+  #footer-center {
+    padding: 0 8.5% 0 6%;
+  }
+
+  #footer-right {
+    padding-right: 7%;
+  }
+
+  #footer-bottom {
+    border-top: $footer_border;
+    padding-top: 30px;
+
+    #footer-form {
+      padding-right: 8.5%;
+
+      .widget {
+        position: relative;
+      }
+
+      .gform_body {
+        label {
+          display: none;
+        }
+
+        .validation_message {
+          text-decoration: underline;
+        }
+
+        input[type=email] {
+          max-width: 500px;
+          background: rgba(255, 255, 255, 0.3);
+          border: none;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          height: 45px;
+
+          &:focus, &:active {
+            border: 1px solid #fff;
+            outline: none;
+          }
+        }
+
+        p {
+          @include text-smaller;
+          margin: 0;
+        }
+
+        ul {
+          margin: 0;
+        }
+      }
+
+      .page-button-new {
+        background: transparent !important;
+        border: $footer_border;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.3) !important;
+        }
+      }
+
+      .loading_spinner_wrap {
+        width: 110%;
+        height: 110%;
+        top: -5%;
+        left: -5%;
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .loading_spinner {
+        position: absolute;
+      }
+    }
+
+    #footer-social {
+      align-self: center;
+      padding: 50px 0;
+
+      a {
+        display: inline-block;
+        clear: both;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer#footer {
+    .container {
+      max-width: 500px;
+    }
+
+    #footer-left {
+      border-right: none;
+    }
+
+    #footer-left, #footer-center, #footer-right, #footer-bottom, #footer-top {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
