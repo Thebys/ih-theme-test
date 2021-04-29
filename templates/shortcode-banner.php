@@ -44,7 +44,7 @@
 
     <div class="buttons">
 	<?php if($primaryButtonLink && $primaryButtonText): ?>
-		<a href="<?= $primaryButtonLink ?>" anec="<?= $anec ?>" anea="<?= $anea ?>-primary-click" class="page-button-new"><?= $primaryButtonText ?></a>
+		<a href="<?= $primaryButtonLink ?>" anec="<?= $anec ?>" anea="<?= $anea ?>-primary-click" class="page-button-new transparent"><?= $primaryButtonText ?></a>
 	<?php endif; ?>
     </div>
 </div>
