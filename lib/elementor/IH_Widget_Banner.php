@@ -53,10 +53,7 @@ class IH_Widget_Banner extends \Elementor\Widget_Base
             'background-image',
             [
                 'label' => __('Background image for desktop', IH_Elementor_Extension::TEXT_DOMAIN),
-                'type' => \Elementor\Controls_Manager::MEDIA,
-                'default' => [
-                    'url' => \Elementor\Utils::get_placeholder_image_src(),
-                ],
+                'type' => \Elementor\Controls_Manager::MEDIA,                
             ]
         );
 
@@ -64,10 +61,7 @@ class IH_Widget_Banner extends \Elementor\Widget_Base
             'background-image-mobile',
             [
                 'label' => __('Background image for mobile', IH_Elementor_Extension::TEXT_DOMAIN),
-                'type' => \Elementor\Controls_Manager::MEDIA,
-                'default' => [
-                    'url' => \Elementor\Utils::get_placeholder_image_src(),
-                ],
+                'type' => \Elementor\Controls_Manager::MEDIA,                
             ]
         );
         $this->add_control(
